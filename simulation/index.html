@@ -1,0 +1,372 @@
+<!-- This HTML page and script files are developed by
+    Piyali Chattopadhyay
+    Project Scientist-Technical,
+    Virtual Labs IIT Kharagpur.-->
+
+<!DOCTYPE html>
+<html lang="en"><!--html tag start-->
+<head>
+    <title>Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+
+   
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script  src="./js/geartooth.js">   </script>
+  
+
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script>-->
+
+
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.js"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.2.1/math.min.js  "></script>
+ 
+ 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+
+<link rel="stylesheet" href="./css/geartooth.css">
+
+	
+
+
+  <style>
+	
+	
+	canvas {	
+	max-width:100%;
+	}
+	
+	
+  </style>
+  
+  
+  
+</head>
+<body><!--body tag start-->
+    <div class="container p-3 my-3 text-primary text-center "><!--First Container under body tag start-->
+       
+        <hr>
+        <div class="row"><!--2nd row under 1st container start-->
+            
+            <div class="col-md-12"><!--2nd col under 2nd row start-->
+                <p class="h1"> <b>Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer </b> </p>
+            </div><!--2nd col under 2nd row end-->
+           
+        </div><!--2nd row under 1st container end-->
+        <hr>
+       
+    </div><!--First Container under body tag end-->
+    
+   
+	
+    <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
+      <div class="row"><!--First row under 3rd container start-->
+        <div class="col-md-1"></div><!--First col under 3rd container start& end-->
+        <div class="col-md-10"><!--2nd col under 3rd container start-->
+            <p class="text-center bg-success"> <a class="nav-link" data-bs-toggle="tab"  id="instcontrol" style="background-color:#128BD9"  ><span class=" h3 text-dark"> Instructions </span></a>
+              <div id="inst" style="display:none">
+			  <ol>
+                      <p> This experiment is having two parts i)Gear tooth thickness calculation and ii)Span calculation</p>
+					  
+					  <br/>
+					  <b> Gear tooth thickness calculation:</b><br/>
+					  
+					  <li> Click on the 4 mm Slip Gauge to place it exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
+					 
+					 <li>Click on the 'Plus' sign of 'Horizontal scale jaw' to place the '4 mm Slip Gauge' properly according to its width.</li></br>
+					 
+					 <li>Click on the 4 mm Slip Gauge again to remove it.</li><br/>
+					 
+					 <li>Click on the Spur Gear to place its one tooth (with red mark) exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
+					 
+					 <li>Click on the 'Minus' sign of 'Horizontal scale jaw' to fix the red marked tooth properly according to its width.</li><br/>
+					 
+					 <li>When it is properly fixed between the jaws one alert message will be seen. It is now properly fixed for a gear tooth so no need to
+					 adjust the horizontal jaw position for rest of the experiment. Click on 'Measure' button to measure the tooth thickness as t<sub>1</sub>.</li><br/>
+					
+					 <li>Click on the left side arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it untill a tooth with black mark
+					 comes between the horizontal jaws of Vernier caliper. Click on 'Measure' button to measure this tooth thickness as t<sub>2</sub>.</li><br/>
+					
+					<li>Again click on the left side arrow sign of 'Rotate Gear' button untill another tooth with black mark
+					 comes between the horizontaljaws of Vernier caliper. Click on 'Measure' button to measure this tooth thickness as t<sub>3</sub>.</li><br/>
+					
+					<li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.</li><br/> 
+					 
+					<li>Follow step 8 for successive three times again and click on 'Measure' button each time to measure the tooth thickness. After taking another
+					three readings of t<sub>1</sub>, t<sub>2</sub> and t<sub>3</sub> follow step 9 to fill the second row of the observation table.
+					Till now total 6 readings have been taken.</li><br/>
+					 
+					<li>Follow step 10 untill total readings of tooth thickness in observation table is 15.</li><br/>
+
+					 <li>Now follow steps 7-11 to measure the thickness of gear teeth ( with blue marks ). 15 blue marked teeth are there, hence at the end
+					 there would be total 30 thickness readings.</li><br/>
+					 
+					 <li>Under 'Calculations' box enter the maximum and minimum mean tooth thickness values from observation table. Click on 'Calculate' button to see the variation
+					 between them.</li><br/>
+					 
+					 <li> Click on 'Clear' button to erase the observation data. Click on 'Table' button to hide the observation table. </li><br/>
+					 
+					<br/>
+					</ol>
+					
+					<br/>
+					
+					<ol>
+                      
+					  <b> Span calculation:</b><br/>
+					  
+					  <li>Click on 'Span' under 'Experiment Parts' to perform second part of this experiment.</li><br/>
+					  
+					  <li> Click on the Spur Gear to place it exactly between the screws of flange micrometer.</li><br/>
+					 
+					 <li>Click on the right side arrow sign of 'Rotate Micrometer' button. The circular scale will rotate, wait untill it stops rotating.
+					 Again rotate it to move the movable screw of micrometer towards right side. Rotate untill a span of three theeth with two red marks comes
+					 between the screws of micrometer ( untill an alert message comes ('Fixed properly')). The movable screw is now properly fixed for a span of three gear teeth.
+					 No need to adjust it for rest of the experiment. Click on 'Measure' button to measure this span thickness as Span<sub>1</sub>.</li><br/>
+					
+					 <li>Click on the left side arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it untill 
+					 another span of three theeth with two red marks comes between the screws of micrometer. Click on 'Measure' button to measure this span thickness as Span<sub>2</sub>.
+					 Click on 'Calculate' button to calculate the mean span.</li><br/>
+					
+					<li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.</li><br/> 
+					 
+					<li>Follow step 4 for other two successive teeth spans (three teeth) with red marks.</li><br/>
+					
+					<li> After taking another two readings of Span<sub>1</sub> and Span<sub>2</sub> click on 'Calculate' button to calculate the mean span.
+					Follow step 5 again to fill the second row of the observation table.</li><br/> 
+					 
+					<li>Till now total 4 readings have been taken.</li><br/>
+					 
+					<li>Now follow steps 4-7 to measure the span of three gear teeth ( with one red and one blue marks ). 4 teeth spans are there with
+					one blue and one red mark, hence at the end there would be total 8 span readings.</li><br/>
+					
+					<li>Calculate the average Mean Span from the observation table and calculate the variation between theoritical and average mean span value.
+					The theoritical span value is written in 'Theory' part.</li><br/>	
+					
+					<li> Click on 'Clear' button to erase the observation data. Click on 'Table' button to hide the observation table.
+					The first part of the experiment i.e. 'Gear tooth thickness calculation' can be performed again by clicking on
+					'Tooth Thickness' under 'Experiment Parts'.</li><br/>
+									
+					<br/><br/>
+					</ol>
+					
+		   </div>
+            </p> 
+          </div><!--2nd col under 3rd container end-->
+		  
+        <div class="col-md-1"></div><!--3rd col under 3rd container start& end-->
+      </div><!--First row under 3rd container end-->
+    </div><!--3rd Container under body tag end-->
+	
+    <div class="container p-3 my-5 text-center " id="canvas" ><!--Fourth container under body tag start-->
+	
+	<div class="row my-5 gy-2">
+	
+	<div class="col-md-12">
+	<input type="number" id="seudobox" value="1" min="1" max="2" style="visibility:hidden">
+	<input type="number" id="chkgear" value="1" min="1" max="2" style="visibility:hidden">
+	
+	<div class = "d-inline flex p-3">
+	
+	<div class ="p-2">
+	<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Experiment Parts
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" onclick="seudovalue1();Experiment1()">Tooth Thickness</a></li>
+    <li><a class="dropdown-item" onclick="seudovalue2();Experiment2()">Span</a></li>
+  </ul>
+</div></div>
+	<div class ="p-2">
+	<button type="button"   class="btn btn-success " >
+		 <i class="fa fa-angle-double-right"  onclick="rotateGear()" style="color:white"></i>&nbsp;Rotate Gear&nbsp;<i class="fa fa-angle-double-left"  onclick="rotateGearRev()" style="color:white"></i>
+		</button>
+		
+		<button type="button" id="j1"  class="btn btn-primary " >
+		 <i class="fa fa-plus"  onclick="horijawright()" style="color:white"></i>&nbsp;Horizontal scale jaw&nbsp;<i class="fa fa-minus"  onclick="horijawleft()" style="color:white"></i>
+		</button>
+		
+		<button type="button"  id="j2" class="btn btn-primary " >
+		 <i class="fa fa-plus"  onclick="verjawup()" style="color:white"></i>&nbsp;Vertical scale jaw&nbsp;<i class="fa fa-minus"  onclick="verjawdown()" style="color:white"></i>
+		</button>
+		
+		<button type="button"  class="btn btn-info " onclick="Math_model()" >Measure</button>
+		</div>
+	</div>
+	</div></div>
+	
+	
+		<div class="row ">	
+	<div class="col-md-6">
+			<div class="card" style=" width:100%;background-color:pink" > 
+			
+			<div class="card-body"  >
+			<span class="card-title bg-light"> Measurement of Tooth Thickness</span><br/>			
+			<span class="card-text" >t<sub>1</sub>:&nbsp;<input  type="number" id="t1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text">t<sub>2</sub>:&nbsp;<input type="number" id="t2" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text">t<sub>3</sub>:&nbsp;<input type="number" id="t3" value="0" readonly=readonly style="width:30%;text-align:center" ></span><br/><br/>
+			
+			</div></div></div>
+			
+			<div class="col-md-6">
+			<div class="card" style="width:100%;background-color:pink"> 
+			
+			<div class="card-body"  >
+			<span class="card-title bg-light"> Calculations</span><br/>	
+			
+			<span class="card-text">Enter maximum mean t:&nbsp;<input type="number" id="maxt" value="0" style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text">Enter minimum mean t:&nbsp;<input type="number" id="mint" value="0" style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text">Maximum variation of chordal tooth thickness:&nbsp;<input type="number" id="varit" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness: T = N&times;m sin (&pi;/2N) = 6.28 mm</span><br/><br/>
+			
+			<!-- <span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/> -->
+			
+			<button  type="button"   class="btn btn-danger " onclick="calculate()" >Calculate</button>
+			</div></div></div>
+			
+			
+			</div>
+			
+			
+			<div class="row ">
+			<div class="col-md-12">
+			
+			<div   class="img-container">		
+			
+			<img class="img-fluid" src="./images/vernier.png" style="visibility:hidden">
+			<img  id ="vernier" src="./images/vernier.png" >
+			
+			<img id="mjh" src="./images/mjh.png" onclick="">
+			
+			<img id="mjv" src="./images/mjv.png" >
+			<img id="mjvprt" src="./images/mjvprt.png" >
+			<img id="mmgauge" src="./images/mmgauge.png" onclick="moveGauge()" >
+			<p id = "gauget">4 mm Slip Gauge</p>
+			<img id="gear" src="./images/gear2.png" onclick = "moveGear()">
+			<p id = "geart">Spur Gear</p>					
+			
+			</div>	
+			<input type="number" id="movechk" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
+			<input type="number" id="movechk2" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
+	</div>
+
+	</div>
+	
+	
+	
+	 <div class="row  my-5 gy-2"><!--- 2nd row under fourth container start--->		
+		
+			<div class="col-md-12 "><!--2nd col under 2nd row start -->
+			
+			
+			
+			<div   class="img-container">
+			<img  src="./images/gear.png" style="visibility:hidden;">
+	
+		</div><br/>
+		<button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
+	
+		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>
+		</div>
+		</div> 
+		
+	<div class="row"><!--- 2nd row under fourth container start--->		
+		
+			<div class="col-md-12 "><!--2nd col under 2nd row start -->	
+			
+			<br/>
+			<div><a class="nav-link" data-bs-toggle="tab"  id="myTables" style="background-color:#128BD9" ><span class=" h3 text-dark"> Table </span></a>
+			
+			<table id="obsTable1" style="display:none;width:100%">			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>t<sub>1</sub>(in)</th> 
+					<th>t<sub>2</sub>(in)</th>
+					<th>t<sub>3</sub>(in)</th>
+					<th>Mean t(in)</th>
+					<th>Theoritical thickness T(in)</th>
+					<th>Variation(in)</th>
+				  </tr>
+				  
+			</table>
+			<table id="obsTable2" style="display:none;width:100%">			
+				
+				  <tr>
+					<th>Sl No.</th>
+					<th>Span<sub>1</sub>(mm)</th> 
+					<th>Span<sub>2</sub>(mm)</th>
+					<th>Mean value of span(mm)</th>
+				  </tr>
+				  
+			</table>
+			
+			</div>	
+				</div>				
+		
+	</div><!--- 2nd row under fourth container end--->	
+
+
+	 <div class="row justify-content-center"><!-----------------------graph T vs. w----------------------------------------->
+		
+	 
+			<div class="col-md-12">
+				
+				<div align="center" id="myPlot" style="width:100%;max-width:700px;padding-left:10%"></div>
+				
+				
+				
+			</div>
+			
+			
+		
+	</div>	
+
+	
+	
+          <!-- Code End here-->
+        </div><!--Fourth container under body tag end-->
+          
+      <!--</div>
+    </div>-->
+
+    <div class="container p-3 my-5 text-primary text-center border"><!--Last and fifth container under body tag start-->
+      <div class="row">
+        <footer>
+          <div class="row ce">
+            <div class="col-sm-12">
+              <p class="h5"><i> Copyright ©2022 <a href="http://vlabs.iitkgp.ac.in/vlt/">Virtual Labs IIT Kharagpur</a> </i><br><br>
+              <a href="../../license/index.html" target="_blank"> Licensing Terms </a>
+            </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+  </div><!--Last and fifth container under body tag end-->
+  
+  
+
+<script src="../assets/js/iframeResize.js"></script></body><!--body tag end-->
+
+ 
+</html><!--html tag end-->
