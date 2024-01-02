@@ -174,12 +174,12 @@
       </div><!--First row under 3rd container end-->
     </div><!--3rd Container under body tag end-->
 	
-    <div class="container p-3 my-5 text-center " id="canvas" ><!--Fourth container under body tag start-->
+    <div class="container p-3 my-5 text-center border" id="canvas" ><!--Fourth container under body tag start-->
 	
 	<div class="row my-5 gy-2">
 	
 	<div class="col-md-12">
-	<input type="number" id="seudobox" value="1" min="1" max="2" style="visibility:hidden">
+	<input type="number" id="seudobox" value="2" min="1" max="2" style="visibility:hidden">
 	<input type="number" id="chkgear" value="1" min="1" max="2" style="visibility:hidden">
 	
 	<div class = "d-inline flex p-3">
@@ -194,38 +194,42 @@
     <li><a class="dropdown-item" onclick="seudovalue2();Experiment2()">Span</a></li>
   </ul>
 </div></div>
+
 	<div class ="p-2">
 	<button type="button"   class="btn btn-success " >
 		 <i class="fa fa-angle-double-right"  onclick="rotateGear()" style="color:white"></i>&nbsp;Rotate Gear&nbsp;<i class="fa fa-angle-double-left"  onclick="rotateGearRev()" style="color:white"></i>
 		</button>
 		
-		<button type="button" id="j1"  class="btn btn-primary " >
+		<button type="button" id="g1"  class="btn btn-success " >
+		 <i class="fa fa-angle-double-left"  onclick="cscalePosChng();screw_widthincr()" style="color:white"></i>&nbsp;Rotate Micrometer&nbsp;<i class="fa fa-angle-double-right"  onclick="cscalePosChngRev();screw_widthdecr()" style="color:white"></i>
+		</button>
+		<!-- <button type="button" id="j1"  class="btn btn-primary " >
 		 <i class="fa fa-plus"  onclick="horijawright()" style="color:white"></i>&nbsp;Horizontal scale jaw&nbsp;<i class="fa fa-minus"  onclick="horijawleft()" style="color:white"></i>
 		</button>
 		
 		<button type="button"  id="j2" class="btn btn-primary " >
 		 <i class="fa fa-plus"  onclick="verjawup()" style="color:white"></i>&nbsp;Vertical scale jaw&nbsp;<i class="fa fa-minus"  onclick="verjawdown()" style="color:white"></i>
-		</button>
+		</button> -->
 		
 		<button type="button"  class="btn btn-info " onclick="Math_model()" >Measure</button>
 		</div>
 	</div>
 	</div></div>
 	
-	
-		<div class="row ">	
-	<div class="col-md-6">
+	<div class="row ">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
 			<div class="card" style=" width:100%;background-color:pink" > 
 			
 			<div class="card-body"  >
-			<span class="card-title bg-light"> Measurement of Tooth Thickness</span><br/>			
-			<span class="card-text" >t<sub>1</sub>:&nbsp;<input  type="number" id="t1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
-			<span class="card-text">t<sub>2</sub>:&nbsp;<input type="number" id="t2" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
-			<span class="card-text">t<sub>3</sub>:&nbsp;<input type="number" id="t3" value="0" readonly=readonly style="width:30%;text-align:center" ></span><br/><br/>
-			
+			<span class="card-title bg-light"> Measurement of Gear Span</span><br/>			
+			<span class="card-text" >Span<sub>1</sub>:&nbsp;<input  type="number" id="s1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text">span<sub>2</sub>:&nbsp;<input type="number" id="s2" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text">Mean span:&nbsp;<input type="number" id="ms" value="0" readonly=readonly style="width:30%;text-align:center" ></span><br/><br/>
+			<button  type="button"   class="btn btn-danger " onclick="calculate2()" >Calculate</button>
 			</div></div></div>
 			
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 			<div class="card" style="width:100%;background-color:pink"> 
 			
 			<div class="card-body"  >
@@ -239,53 +243,54 @@
 			
 			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness: T = N&times;m sin (&pi;/2N) = 6.28 mm</span><br/><br/>
 			
-			<!-- <span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/> -->
+			<span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/>
 			
 			<button  type="button"   class="btn btn-danger " onclick="calculate()" >Calculate</button>
-			</div></div></div>
-			
+			</div></div></div> -->
+			<div class="col-md-1"></div>
 			
 			</div>
 			
 			
 			<div class="row ">
 			<div class="col-md-12">
+			<div   class="img-container">
 			
-			<div   class="img-container">		
+			
 			
 			<img class="img-fluid" src="./images/vernier.png" style="visibility:hidden">
-			<img  id ="vernier" src="./images/vernier.png" >
+			<img  id ="fmfixed" src="./images/fmfixed2.png">
 			
-			<img id="mjh" src="./images/mjh.png" onclick="">
+			<img id="fmls" src="./images/fmls.png" onclick="">	
+			<img id="fmmv" src="./images/fmmove.png" onclick="">	
+			 <img id="cscale" src="./images/fm1.png" >
+			<img id="ratchet" src="./images/ratchet.png" > 
+			<img id="gatis" src="./images/mjvprt.png" >
 			
-			<img id="mjv" src="./images/mjv.png" >
-			<img id="mjvprt" src="./images/mjvprt.png" >
-			<img id="mmgauge" src="./images/mmgauge.png" onclick="moveGauge()" >
-			<p id = "gauget">4 mm Slip Gauge</p>
-			<img id="gear" src="./images/gear2.png" onclick = "moveGear()">
-			<p id = "geart">Spur Gear</p>					
+			<!-- <img id="mmgauge" src="./images/mmgauge.png" onclick="moveGauge()" > 
+			<p id = "gauget">4 mm Slip Gauge</p>-->
+			<img id="gear2" src="./images/gear.png" onclick = "moveGear2()">
+			<p id = "geart">Spur Gear</p>
+			
+					
 			
 			</div>	
 			<input type="number" id="movechk" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
 			<input type="number" id="movechk2" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
 	</div>
-
+	
+	<!--<button class="btn btn-success" onclick="Dw_Tester()">Simulate</button>-->
 	</div>
 	
-	
-	
-	 <div class="row  my-5 gy-2"><!--- 2nd row under fourth container start--->		
+	 <div class="row"><!--- 2nd row under fourth container start--->		
 		
 			<div class="col-md-12 "><!--2nd col under 2nd row start -->
-			
-			
-			
 			<div   class="img-container">
 			<img  src="./images/gear.png" style="visibility:hidden;">
-	
+			
 		</div><br/>
 		<button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
-	
+		<!-- <button type="button"   class="btn btn-success " onclick="plot()" >Plot</button> -->
 		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>
 		</div>
 		</div> 
