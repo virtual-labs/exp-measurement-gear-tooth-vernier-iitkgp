@@ -2,38 +2,59 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "The purpose of gears in mechanical systems is to",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Transfer electrical power",
+        "b": "Transfer motion between rotating shafts",
+        "c": "Generate heat",
+        "d": "None of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Gear ratio is defined as ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Speed of input gear",
+        "b": "The ratio of the number of teeth on the driven to driver gear",
+        "c": "Pitch circle diameter of driven gear",
+        "d": "All of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "The dedendum of the gear tooth profile is defined as",
+      "answers": {
+        "a": "Thickness of gear tooth",
+        "b": "Distance from the pitch circle to the tip of the tooth",
+        "c": "Distance between the pitch circle to the root circle",
+        "d": "The height of the tooth above the pitch circle"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "Which type of gears have non-parallel and non-intersecting shafts?",
+      "answers": {
+        "a": "Spur gears",
+        "b": "Bevel gears",
+        "c": "Helical gears",
+        "d": "Worm gears"
+      },
+      "correctAnswer": "d",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "The fundamental principle of the law of gearing is:",
+      "answers": {
+        "a": "Torque is directly proportional to the gear ratio",
+        "b": "The velocity ratio is constant for gears in mesh.",
+        "c": "The pitch circle diameter determines the gear ratio.",
+        "d": "All of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
     }
   ]
 }
