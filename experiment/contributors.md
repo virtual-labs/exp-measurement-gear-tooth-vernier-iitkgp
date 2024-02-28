@@ -25,4 +25,5 @@ SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department
 :--|:--|:--|:--|:--|:--|
 1 | **Piyali Chattopadhyay** | Developer  | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur | 
 2 | **Vishal Mishra** | |Research Scholar | Department of Mechanical Engineering | IIT Kharagpur | 
-3 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
+3 | **Gaddam Kranthikumar** | |Research Scholar|  Department of Mechanical Engineering | IIT Kharagpur |
+4 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |

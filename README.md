@@ -50,6 +50,6 @@ Gears are toothed wheel that are used to transmit motion from one shaft to anoth
 SrNo | Name | VLabs Developer or Integration Engineer | Designation | Department| Institute
 :--|:--|:--|:--|:--|:--|
 1 | **Piyali Chattopadhyay** | Developer  | Project Scientist | Department of Mechanical Engineering | IIT Kharagpur | 
-2 | **Nobel Karmakar** | |Research Scholar | Department of Mechanical Engineering | IIT Kharagpur | 
-3 | **Sudhansu Sekhar Nath** | |Research Scholar|  Department of Mechanical Engineering | IIT Kharagpur |
+2 | **Vishal Mishra** | |Research Scholar | Department of Mechanical Engineering | IIT Kharagpur | 
+3 | **Gaddam Kranthikumar** | |Research Scholar|  Department of Mechanical Engineering | IIT Kharagpur |
 4 | **Subhasis Mahata** | Integration Engineer | Senior Project Scientist | Department of Mechanical Engineering | IIT Kharagpur |
