@@ -36,7 +36,7 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 
 2.	Pitch diameter: The diameter of the imaginary circle that passes through the point where the teeth of two mating gears mesh. 
 
-3.	 Pitch: The distance between corresponding points on adjacent teeth, measured along the pitch circle.
+3.	Pitch: The distance between corresponding points on adjacent teeth, measured along the pitch circle.
 
 4.	Module: It is the ratio of the pitch diameter to the number of teeth.
 
@@ -144,12 +144,12 @@ n = nearest integer to $$\frac{AB \times N}{\pi N m \ cos \psi} = \frac{N(\psi +
 $$n = \frac{N \ tan \ \psi}{\pi}$$
 
 here, 
-$$\psi = 20 \degree$$
+$$\psi = 20 ^{\circ}$$
 
 Theoretically the value of the span can be calculated by 
 
 $$AB = \frac{(\beta + \gamma)N m \ cos (\gamma/2)}{2}$$
-$$inv \psi = tan \ \psi - \psi = tan 20 \degree - 20\frac{\pi}{180}$$
+$$inv \psi = tan \ \psi - \psi = tan \ 20 ^{\circ} - 20\frac{\pi}{180}$$
 
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								
