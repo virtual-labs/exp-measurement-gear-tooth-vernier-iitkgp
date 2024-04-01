@@ -116,7 +116,7 @@ $$t = Nm \ sin \ (\Pi / \ 2 N)$$
 
 $$h_2 = DE = R \ (1 - cos \ (\alpha / 2)) = \frac{Nm}{2} (1 - cos \ \Pi / 2 N)$$
 
-“t” is the chord ADB while tooth thickness is arc AEB. Therefore, the tooth thickness thus measures is called as chordal tooth thickness.
+“t” is the chord ADB while tooth thickness is arc AEB. Therefore, the tooth thickness thus measured is called as chordal tooth thickness.
 
 **Tooth thickness measurement by Flange Micrometer:**
 
