@@ -21,7 +21,8 @@ Gears are toothed wheel that are used to transmit motion from one shaft to anoth
 
 
 <div align="center">
-<img class="img-fluid"  src="experiment/images/gear.jpg" alt=""><br>           
+<img class="img-fluid"  src="experiment/images/gear.jpg" alt=""><br>
+<b>Fig. 1. Gears</b>
 </div>
 
 <b>Subject matter expertise | <b> **Dr. Poonam Sundriyal**
