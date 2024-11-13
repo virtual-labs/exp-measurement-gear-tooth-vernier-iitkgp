@@ -3,7 +3,7 @@
 
 <div align="center">
 <img class="img-fluid"  src="./images/conn.png" alt=""><br> 
-Figure 1. Gear tooth vernier caliper with spur gear          
+<b>Figure 1. Gear tooth vernier caliper with spur gear</b>         
 </div>
 
 
@@ -47,7 +47,7 @@ between them.
 
 <div align="center">
 <img class="img-fluid"  src="./images/conn2.png" alt=""><br> 
-Figure 2. Flange micrometer with spur gear          
+<b>Figure 2. Flange micrometer with spur gear</b>         
 </div>
 
 
