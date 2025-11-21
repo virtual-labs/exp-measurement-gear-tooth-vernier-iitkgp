@@ -1,4 +1,4 @@
 ## Aim of the experiment
 
-To measure spur gear tooth elements.
+To measure spur gear tooth element.
                 
