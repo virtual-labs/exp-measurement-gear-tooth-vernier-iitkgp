@@ -1,45 +1,21 @@
 ## Theory
 
-Gears are mainly used for the transmission of power and motion. Basically, gears are round wheel with teeth that meshes with another gear, allowing force to be fully transmitted without slippage. Depending on their construction and arrangement, gears can transmit forces from the power source at different speeds, torques, or in different directions. Gear can also mesh with any device having compatible teeth, such as linear moving racks. For closer control over the accuracy of the gear's manufacture, precision measurement of the gear plays a vital role. There are different types of gears based on various application sectors. Some of them are discussed below:
+Gears are mainly used for the transmission of power and motion. Basically, gears are rotating machine part with teeth that meshing with another gear tooth, allowing force to be fully transmitted without slippage. Based on their design and arrangement, gears can transmit forces from the power source, while changing the speed, torque or the direction of motion. Gear can also mesh with any device having compatible teeth, such as linear moving racks. For closer control over the accuracy of the gear's manufacture, precision measurement of the gear plays a vital role. There are different types of gears based on various application sectors. One of them is discussed below:
 
-**Spur Gear:** Spur gears are cylindrical-shaped toothed components; the edge of each tooth is straight and aligned parallel to the axis of rotation, figure 1 shows a schematic representation of spur gear.
-
-<div align="center">
-<img src="images/spurgear.png" class="img-fluid">
-
-<b>Fig 1. Spur gear</b>
-</div>
-
-**Helical Gear:** In helical gears the leading edges of the teeth are not parallel to the axis of rotation but are set at an angle, as shown in figure 2. The angled teeth engage more gradually than do spur gear teeth. This causes helical gears to run more smoothly and quietly than spur gears.
+**Spur Gear:** Spur gears are cylindrical-shaped toothed components; the edge of each tooth is straight and aligned parallel to the axis of rotation, Fig. 1 shows a schematic representation of spur gear.
 
 <div align="center">
-<img src="images/helicalgear.png" class="img-fluid">
+<img src="images/spurgear.png" style="width:80%">
 
-<b>Fig 2. Helical gear</b>
+<b>Fig. 1. Spur gear</b>
 </div>
 
-**Bevel gear:** It has teeth that are not parallel to the rotation axis but conically shaped, as shown in figure 3. The angle between the shafts of mating gears can be anything except zero or 180 degrees. Bevel gears with equal teeth and shaft axis at 90 degrees are called miter gears.
-
-<div align="center">
-<img src="images/bevelgear.png" class="img-fluid">
-
-<b>Fig 3. Bevel gear</b>
-</div>
-
-**Worm gear:** The worm gear consists of a combination of a worm and a worm gear. The worm consists of helical grooves, however its helix angle is usually large, and its body is usually fairly long in the axial direction, as shown in figure 4. These gears are mainly used in applications requiring large speed reductions in compact space.  
-				
-<div align="center">
-<img src="images/wormgear.png" class="img-fluid">
-
-<b>Fig 4. Worm and worm gear</b>
-</div>
-
-**Gear Nomenclature:** It describes the various features and characteristics of gears. Some common terms used in gear nomenclature shown in figure 5 are discussed below:
+**Gear Nomenclature:** It describes the various features and characteristics of gears. Some common terms used in gear nomenclature shown in Fig. 2 are discussed below:
 
 <div align="center">
 <img src="images/gearnomen.png" class="img-fluid">
 
-<b>Fig.5 Gear nomenclature</b>
+<b>Fig. 2. Gear nomenclature</b>
 </div>
 
 1.	Pitch circle: It is an imaginary circle upon which the pitch diameter is located.
@@ -57,115 +33,121 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 7.	Clearance: The difference between the dedendum of one gear and addendum of the mating gear. It provides space for the teeth of the mating gears to mesh without interference.
 
 
-
 **Gear geometric nomenclature:**
 
-The tooth thickness is often measured at the pitch circle, as shown in figure 6. The most commonly used curve for gear-tooth profiles is the involute of a circle. It can be described as the curve drawn by a point on a taut (line BC in the figure 6), an inextensible string as it unwinds from another circle. The circle from which the involute is formed is called the base circle. The involute profile is shown in the figure 6. The pressure angle is defined as the angle between the line of action and the common tangent to the pitch circles shown in figure 7. The base and pitch radius are denoted by r<sub>b</sub> and r<sub>p</sub> respectively. The pitch circle radius is denoted by R. The involute function (&delta;) is found from the fundamental principle of involute
+The tooth thickness is often measured at the pitch circle, as shown in Fig.3. The most commonly used curve for gear-tooth profiles is the involute of a circle. It can be described as the curve traced by a point on an inextensible string (line <span style="font-family:'Bodoni MT';font-style:italic">BC</span> in Fig.3) as it unwinds from circle. The circle from which the involute is formed is called the base circle. The involute profile is shown in the Fig. 3. The pressure angle is defined as the angle between the line of action and the common tangent to the pitch circles shown in Fig. 4. The base and pitch radius are denoted by <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>b</sub></span> and <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>p</sub></span> respectively. The pitch circle radius is denoted by R. The involute function (&delta;) is required for the gears to ensure a constant velocity ratio and smooth, efficient power transmission. It is derived from the fundamental principle of involute.
 						
 <div align="center">
-<img src="images/involute.png" class="img-fluid">
+<img src="images/involute.png" style="width:80%">
 
-<b>Fig.6 Involute profile </b>
+<b>Fig. 3. Involute profile </b>
 </div>
 
 <div align="center">
 <img src="images/pinion.png" class="img-fluid">
 
-<b>Fig.7 Gear in mesh with a pinion</b>
+<b>Fig. 4. Gear in mesh with pinion</b>
 </div>
 
-From the Figure 6 involute profile can be seen 
+From the Fig. 3 involute profile can be seen 
 
-$$OB = OC \ cos \Psi = r_b$$
+$$OB = OC \ cos \psi = r_b \tag{1}$$
 
-$$BC = arc \ AB = r_b \ tan \Psi$$
+$$BC = arc \ AB = r_b \ tan \psi \tag{2}$$
 
-$$Arc \ BD = r_b \ \Psi \ (radians)$$
+$$Arc \ BD = r_b \ \psi \ (radians) \tag{3}$$
 
-$$r_b \ \delta = r_b \ tan \Psi - r_b \ \Psi$$
+$$r_b \ \delta = r_b \ tan \psi - r_b \ \psi \tag{4}$$
 
-$$\delta = tan \Psi - \Psi \ (radians)$$
+$$\delta = tan \ \psi - \psi \ (radians) \tag{5}$$
 
 
 **Tooth thickness measurement by Gear Tooth Vernier Calliper:**
 
-Tooth thickness is measured by the gear tooth Vernier calliper as shown in figure 8. Since the gear tooth thickness varies from root to the tip, Vernier must be capable of measuring the tooth thickness at a specified location on the tooth. The tooth thickness is measured at the pitch circle as shown in figure 9. The thickness of tooth at pitch circle and the addendum is measured by an adjustable tongue, each of which is adjusted independently by adjustable screws on the graduated bars. The gear tooth Vernier is set with its vertical scale at a distance equal to chordal addendum so that the thin slit will be at height ‘m’ from the tip of the jaw. Hence the gear tooth slit will be on top land and the tip of the jaws will measure the chordal thickness, ‘t’.
+Tooth thickness is measured by the gear tooth Vernier calliper as shown in Fig. 5. Since the gear tooth thickness varies from root to the tip, Vernier must be capable of measuring the tooth thickness at a specified location on the tooth. The tooth thickness is measured at the pitch circle as shown in Fig. 6. The thickness of tooth at pitch circle and the addendum is measured by an adjustable tongue, each of which is adjusted independently by adjustable screws on the graduated bars. The gear tooth Vernier is set with its vertical scale at a distance equal to chordal addendum so that the thin slit will be at height ‘<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">m</span>’ from the tip of the jaw. Hence the gear tooth slit will be on top land and the tip of the jaws will measure the chordal thickness, ‘<span style="font-family:'Bodoni MT';font-style:italic">t</span>’.
 
 <div align="center">
 <img src="images/fig8.png" class="img-fluid">
 
-<b>Fig.8 Gear tooth vernier calliper </b>
+<b>Fig. 5. Gear tooth vernier calliper </b>
 </div>
 
 <div align="center">
 <img src="images/geartooth.png" class="img-fluid">
 
-<b>Fig.9 Gear tooth geometry</b>
+<b>Fig. 6. Gear tooth geometry</b>
 </div>
 
-From figure 9,
+From Fig. 6,
 
-$$Chordal \ addendum, \ h = (m + h_2)$$
-$$Chordal \ thickness, \ t = AB = 2AD$$
-$$\angle AOD = \alpha / 2 = 2 \Pi / 4 N = \Pi / 2N$$
+$$Chordal \ addendum, \ h = (m + h_2) \tag{6}$$
 
-Where, R = Pitch Circle Radius = Nm/2
+$$Chordal \ thickness, \ t = AB = 2AD \tag{7}$$
 
-$$t = 2 AO \ sin \ (\alpha / 2) = 2 R \ sin \ (\Pi / \ 2 N)$$
-$$t = Nm \ sin \ (\Pi / \ 2 N)$$
+$$\angle AOD = \alpha / 2 = 2 \Pi / 4 N = \Pi / 2N \tag{8}$$ 
 
-$$h_2 = DE = R \ (1 - cos \ (\alpha / 2)) = \frac{Nm}{2} (1 - cos \ \Pi / 2 N)$$
+$$R = \ Pitch \ Circle \ Radius = \frac{N m}{2} \tag{9}$$
 
-“t” is the chord ADB while tooth thickness is arc AEB. Therefore, the tooth thickness thus measured is called as chordal tooth thickness.
+$$t = 2 AO \ sin \ (\alpha / 2) = 2 R \ sin \ (\Pi / \ 2 N) \tag{10}$$
+
+$$t = N m \ sin \ (\Pi / \ 2 N) \tag{11}$$
+
+$$h_2 = DE = R \ (1 - cos \ (\alpha / 2)) = \frac{N m}{2} (1 - cos \ \Pi / 2 N) \tag{12}$$
+
+“<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">t</span>” is the chord ADB while tooth thickness is arc <span style="font-family:'Bodoni MT';font-style:italic">AEB</span>. Therefore, the tooth thickness thus measured is called as chordal tooth thickness.
 
 **Tooth thickness measurement by Flange Micrometer:**
 
 Flange micrometer is used for the measurement of gear span. It is specialised type of micrometer used to measure the thickness of flange or the distance between two surfaces, such as face of flange and another surface it interfaces with. It typically consists of a frame, anvil, spindle and thimble . The spindle is brought into contact with one surface, and the thimble is rotated to bring the spindle into contact with the other surface to measure the gear span.
 From the principle of the involute profile the sum of the generators 
-AF + FB = A'F + FB' = arc length CD along the base circle as shown in figure 10. 
+<span style="font-family:'Bodoni MT';font-style:italic">AF + FB = A'F + FB'</span> = arc length <span style="font-family:'Bodoni MT';font-style:italic">CD</span> along the base circle as shown in Fig. 7. 
 
 <div align="center">
 <img src="images/gearspan.png" class="img-fluid">
 
-<b>Fig.10 Measurement of tooth thickness error</b>
+<b>Fig. 7. Measurement of tooth thickness error</b>
 </div>
 
-Hence the measurement of span AB can be taken in any position with the Flange micrometer touching tooth flange. Any tooth thickness error will show a corresponding error in the value of AB. 
+Hence the measurement of span <span style="font-family:'Bodoni MT';font-style:italic">AB</span> can be taken in any position with the Flange micrometer touching tooth flange. Any tooth thickness error will show a corresponding error in the value of <span style="font-family:'Bodoni MT';font-style:italic">AB</span>. 
 
-Let the number of teeth in the span of AB be “n”.
+Let the number of teeth in the span of <span style="font-family:'Bodoni MT';font-style:italic">AB</span> be “<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">n</span>”.
 
 then,
-$$\beta = \frac{(n-1)2\pi}{N}$$
+$$\beta = \frac{(n-1)2\pi}{N} \tag{13}$$
+
+$$\beta = \frac{N m cos (\frac{\psi}{2})}{2} \tag{14}$$
 
 $$OD = \frac{N m \ cos(\gamma/2)}{2}$$
 
+where,
+$$inv \ \psi = tan \psi -\psi (radians) \tag{15}$$
+
+$$CD = (\beta + \gamma) OD \tag{16}$$
+
+$$AB = CD = A'B' \tag{17}$$
+
+$$AB = \frac{(\beta + \gamma)}{2} N m \ cos\frac{\gamma}{2} \tag{18}$$
 
 where,
-$$inv \ \psi = tan \psi -\psi(radians)$$
-$$CD = (\beta + \gamma)OD$$
-$$AB =CD = A'B'$$
-$$AB = \frac{(\beta + \gamma)}{2}Nm \ cos\frac{\gamma}{2}$$
+$$\alpha = \frac{\pi}{N} \tag{19}$$
 
-where,
-$$\alpha = \frac{\pi}{N}$$
-$$\beta = \frac{(n-1)2\pi}{N}$$
-$$\gamma = 2 inv \ \psi$$
+$$\beta = \frac{(n-1)2\pi}{N} \tag{20}$$
 
-The optimum number of teeth “n” for the measurement of the span can be found by taking the contact points near the pitch points.
+$$\gamma = 2 inv \ \psi \tag{21}$$
 
-$$AB = AF + FB = CD = 2OF(\psi + INV \ \psi )$$
+The optimum number of teeth “<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">n</span>” for the measurement of the span can be found by taking the contact points near the pitch points.
 
-n = nearest integer to $$\frac{AB \times N}{\pi N m \ cos \psi} = \frac{N(\psi + inv \ \psi)}{\pi}$$
+$$AB = AF + FB = CD = 2OF(\psi + INV \ \psi ) \tag{22}$$
 
-$$n = \frac{N \ tan \ \psi}{\pi}$$
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">n</span> = nearest integer to $$\frac{AB \times N}{\pi N m \ cos \psi} = \frac{N(\psi + inv \ \psi)}{\pi} \tag{23}$$
 
-here, 
-$$\psi = 20 ^{\circ}$$
+$$n = \frac{N \ tan \ \psi}{\pi}, \ here, \psi = 20 ^{\circ} \tag{24}$$
 
 Theoretically the value of the span can be calculated by 
 
-$$AB = \frac{(\beta + \gamma)N m \ cos (\gamma/2)}{2}$$
-$$inv \psi = tan \ \psi - \psi = tan \ 20 ^{\circ} - 20\frac{\pi}{180} (radians)$$
+$$AB = \frac{(\beta + \gamma)N m \ cos (\gamma/2)}{2} \tag{25}$$
+
+$$inv \ \psi = tan \ \psi - \psi = tan \ 20 ^{\circ} - 20\frac{\pi}{180} (radians) \tag{26}$$
 
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								
