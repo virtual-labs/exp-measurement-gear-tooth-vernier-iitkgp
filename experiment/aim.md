@@ -1,4 +1,4 @@
 ## Aim of the experiment
 
-To measure spur gear tooth element.
+Measurement of Gear Tooth Profile using Gear Tooth Vernier and Gear Tooth Micrometer.
                 

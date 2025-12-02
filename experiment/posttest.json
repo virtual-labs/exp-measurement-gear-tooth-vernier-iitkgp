@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "For a spur gear with a module of 4 mm and 20 teeth, calculate Pitch diameter and Addendum",
+      "question": "1. For a spur gear with a module of 4 mm and 20 teeth, calculate Pitch diameter and Addendum",
       "answers": {
         "a": "Pitch diameter = 80 mm, Addendum = 4 mm",
         "b": "Pitch diameter = 60 mm, Addendum = 3 mm",
@@ -13,7 +13,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the primary purpose of gear tooth Vernier calipers?",
+      "question": "2. What is the primary purpose of gear tooth Vernier calipers?",
       "answers": {
         "a": "Measure gear module",
         "b": "Inspect gear profile",
@@ -24,7 +24,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Calculate the dedendum, if the module of a spur gear is 4 mm.",
+      "question": "3. Calculate the dedendum, if the module of a spur gear is 4 mm.",
       "answers": {
         "a": "4.62 mm",
         "b": "2.83 mm",
@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the pressure angle in gear terminology",
+      "question": "4. What is the pressure angle in gear terminology",
       "answers": {
         "a": "Angle between gear teeth and the gear axis",
         "b": "Angle formed by addendum and dedendum circle",
@@ -46,7 +46,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "If the rotational speed of the driven gear is 200 rpm and the gear ratio is 4 then calculate rotational speed of driver gear.",
+      "question": "5. If the rotational speed of the driven gear is 200 rpm and the gear ratio is 4 then calculate rotational speed of driver gear.",
       "answers": {
         "a": "800 rpm",
         "b": "50 rpm",
