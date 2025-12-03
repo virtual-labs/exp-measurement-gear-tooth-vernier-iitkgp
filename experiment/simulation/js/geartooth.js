@@ -162,7 +162,7 @@ var pos = 15;
 	
 	var newPos = math.add(pos,counter);
 	//var newPos2 = math.add(pos,keepcount);
-	
+	if(newPos<=60){
 	document.getElementById('mjh').style.left = newPos + "%";
 	
 	
@@ -171,6 +171,11 @@ var pos = 15;
 		counter-= 0.5;
 		
 	}
+	}
+	else{
+		alert('The Horizontal scale jaw can not be moved in right direction further.');
+	}
+	
  }
  
  function horijawleft(){
@@ -180,7 +185,7 @@ var pos = 15;
 	
 	var newPos = math.add(pos,counter);
 	//var newPos2 = math.add(pos,keepcount);
-	
+	if(newPos>=10){
 	document.getElementById('mjh').style.left = newPos + "%";
 	
 	if(newPos == 16.5 && document.getElementById('movechk').value == 2 ){
@@ -203,6 +208,10 @@ var pos = 15;
 		counter = keepcount;
 		counter-= 0.5;
 		
+	}
+	}
+	else{
+		alert('The Horizontal scale jaw can not be moved in left direction further.');
 	}
 	
  }
@@ -259,6 +268,7 @@ clearInterval(interval);
         }
 //setTimeout(function(){ cw(); },100);
  //clearTimeout(8);
+ document.getElementById('g1').disabled=true;
 
  }
  function acw(){
@@ -273,7 +283,7 @@ clearInterval(intervalrev);
         }
 //setTimeout(function(){ cw(); },100);
  //clearTimeout(8);
-
+document.getElementById('g1').disabled=true;
  }
  
  function cw2(){
@@ -288,7 +298,7 @@ clearInterval(interval2);
         }
 //setTimeout(function(){ cw(); },100);
  //clearTimeout(8);
-
+document.getElementById('g1').disabled=true;
  }
  function acw2(){
 	
@@ -302,27 +312,39 @@ clearInterval(intervalrev2);
         }
 //setTimeout(function(){ cw(); },100);
  //clearTimeout(8);
-
+document.getElementById('g1').disabled=true;
  }
 
 function rotategauge(){
 	
 	 interval = setInterval(cw,100);
+	 setTimeout(function(){ 
+	 document.getElementById('g1').disabled=false;
+	 },1050);
 }
 
 function rotategaugerev(){
 	
 	 intervalrev = setInterval(acw,100);
+	 setTimeout(function(){ 
+	 document.getElementById('g1').disabled=false;
+	 },1050);
 }
 
 function rotategauge2(){
 	
 	 interval2 = setInterval(cw2,100);
+	 setTimeout(function(){ 
+	 document.getElementById('g1').disabled=false;
+	 },1050);
 }
 
 function rotategaugerev2(){
 	
 	 intervalrev2 = setInterval(acw2,100);
+	 setTimeout(function(){ 
+	 document.getElementById('g1').disabled=false;
+	 },1050);
 }
 
 ///incr the right position of gauge with 0.7. with one complete revolution circular scale moves 1 mm forward
@@ -455,7 +477,7 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 	 var MS = math.add(9,math.random(-0.05,0.05));///math.add(10,math.multiply(10,math.random(0,0.05)));///main scale reading
 	 var VS = math.add(25,math.multiply(25,math.random(-0.05,0.05)));///vernier scale reading
 	 
-	thickness = math.add(math.multiply(MS,mslc),math.multiply(VS,vslc));///thickness of tooth in  inch
+	thickness = math.add(math.multiply(MS,mslc),math.multiply(VS,vslc)).toFixed(3);///thickness of tooth in  inch
 		
 	console.log('thickness =' + thickness);
 	
@@ -499,7 +521,7 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 	 var MS = math.add(32,math.random(0.1,0.5));///main scale reading of flange micrometer
 	 var VS = math.add(27,math.random(1,2));///main scale reading of flange micrometer
 	 
-	span = math.add(MS,math.multiply(VS,lscount));///span in  mm
+	span = math.add(MS,math.multiply(VS,lscount)).toFixed(2);///span in  mm
 		
 	console.log('span =' + span);
 	
@@ -561,9 +583,9 @@ function CreateTable1() {///thickness
     arr[1] = math.divide(math.round(math.multiply($('#t1').val(),1000)),1000);///math.divide(math.floor(math.multiply($('#t1').val(),1000)),1000);
     arr[2] = math.divide(math.round(math.multiply($('#t2').val(),1000)),1000);///math.divide(math.floor(math.multiply($('#t2').val(),1000)),1000);
 	arr[3] = math.divide(math.round(math.multiply($('#t3').val(),1000)),1000);///math.divide(math.floor(math.multiply($('#t3').val(),1000)),1000);
-	arr[4] = math.divide(math.add(arr[1],arr[2],arr[3]),3);
+	arr[4] = math.divide(math.add(arr[1],arr[2],arr[3]),3).toFixed(3);
 	arr[5] = math.divide(math.round(math.multiply(T,1000)),1000);
-	arr[6] = math.subtract(arr[4],arr[5]);
+	arr[6] = math.subtract(arr[4],arr[5]).toFixed(3);
 	
    
 	
@@ -683,7 +705,7 @@ function calculate(){
 function calculate2(){
 	var sp1 = $('#s1').val();
 	var sp2 = $('#s2').val();
-	var mean = math.divide(math.add(sp1,sp2),2);
+	var mean = math.divide(math.add(sp1,sp2),2).toFixed(2);
 	$('#ms').val(mean);
 		
 }
