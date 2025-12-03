@@ -5,7 +5,7 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 **Spur Gear:** Spur gears are cylindrical-shaped toothed components; the edge of each tooth is straight and aligned parallel to the axis of rotation, Fig. 1 shows a schematic representation of spur gear.
 
 <div align="center">
-<img src="images/spurgear.png" style="width:80%">
+<img src="images/spurgear.png" style="width:60%">
 
 <b>Fig. 1. Spur gear</b>
 </div>
@@ -13,7 +13,7 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 **Gear Nomenclature:** It describes the various features and characteristics of gears. Some common terms used in gear nomenclature shown in Fig. 2 are discussed below:
 
 <div align="center">
-<img src="images/gearnomen.png" class="img-fluid">
+<img src="images/gearnomen.png" style="width:60%">
 
 <b>Fig. 2. Gear nomenclature</b>
 </div>
@@ -38,13 +38,13 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 The tooth thickness is often measured at the pitch circle, as shown in Fig.3. The most commonly used curve for gear-tooth profiles is the involute of a circle. It can be described as the curve traced by a point on an inextensible string (line <span style="font-family:'Bodoni MT';font-style:italic">BC</span> in Fig.3) as it unwinds from circle. The circle from which the involute is formed is called the base circle. The involute profile is shown in the Fig. 3. The pressure angle is defined as the angle between the line of action and the common tangent to the pitch circles shown in Fig. 4. The base and pitch radius are denoted by <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>b</sub></span> and <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>p</sub></span> respectively. The pitch circle radius is denoted by R. The involute function (&delta;) is required for the gears to ensure a constant velocity ratio and smooth, efficient power transmission. It is derived from the fundamental principle of involute.
 						
 <div align="center">
-<img src="images/involute.png" style="width:80%">
+<img src="images/involute.png" style="width:60%">
 
 <b>Fig. 3. Involute profile </b>
 </div>
 
 <div align="center">
-<img src="images/pinion.png" class="img-fluid">
+<img src="images/pinion.png" style="width:60%">
 
 <b>Fig. 4. Gear in mesh with pinion</b>
 </div>
@@ -73,7 +73,7 @@ Tooth thickness is measured by the gear tooth Vernier calliper as shown in Fig. 
 </div>
 
 <div align="center">
-<img src="images/geartooth.png" class="img-fluid">
+<img src="images/geartooth.png" style="width:60%">
 
 <b>Fig. 6. Gear tooth geometry</b>
 </div>
@@ -103,7 +103,7 @@ From the principle of the involute profile the sum of the generators
 <span style="font-family:'Bodoni MT';font-style:italic">AF + FB = A'F + FB'</span> = arc length <span style="font-family:'Bodoni MT';font-style:italic">CD</span> along the base circle as shown in Fig. 7. 
 
 <div align="center">
-<img src="images/gearspan.png" class="img-fluid">
+<img src="images/gearspan.png" style="width:60%">
 
 <b>Fig. 7. Measurement of tooth thickness error</b>
 </div>
