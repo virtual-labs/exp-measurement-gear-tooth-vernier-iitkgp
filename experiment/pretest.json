@@ -46,12 +46,12 @@
       "difficulty": "Beginner"
     },
     {
-      "question": "5. The fundamental principle of the law of gearing is:",
+      "question": "5. The module of gear is defined as",
       "answers": {
-        "a": "Torque is directly proportional to the gear ratio",
-        "b": "The velocity ratio is constant for gears in mesh.",
-        "c": "The pitch circle diameter determines the gear ratio.",
-        "d": "All of the above"
+        "a": "Thickness of gear tooth",
+        "b": "The ratio of pitch diameter to the number of teeth ",
+        "c": "Distance between the pitch circle to the root circle",
+        "d": "None of the above"
       },
       "correctAnswer": "b",
       "difficulty": "Beginner"

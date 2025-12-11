@@ -30,9 +30,6 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 
 6.	Dedendum: The radial distance from the pitch circle to the base circle of the gear tooth.
 
-7.	Clearance: The difference between the dedendum of one gear and addendum of the mating gear. It provides space for the teeth of the mating gears to mesh without interference.
-
-
 **Gear geometric nomenclature:**
 
 The tooth thickness is often measured at the pitch circle, as shown in Fig.3. The most commonly used curve for gear-tooth profiles is the involute of a circle. It can be described as the curve traced by a point on an inextensible string (line <span style="font-family:'Bodoni MT';font-style:italic">BC</span> in Fig.3) as it unwinds from circle. The circle from which the involute is formed is called the base circle. The involute profile is shown in the Fig. 3. The pressure angle is defined as the angle between the line of action and the common tangent to the pitch circles shown in Fig. 4. The base and pitch radius are denoted by <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>b</sub></span> and <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>p</sub></span> respectively. The pitch circle radius is denoted by R. The involute function (&delta;) is required for the gears to ensure a constant velocity ratio and smooth, efficient power transmission. It is derived from the fundamental principle of involute.
@@ -115,12 +112,10 @@ Let the number of teeth in the span of <span style="font-family:'Bodoni MT';font
 then,
 $$\beta = \frac{(n-1)2\pi}{N} \tag{13}$$
 
-$$\beta = \frac{N m cos (\frac{\psi}{2})}{2} \tag{14}$$
+$$\beta = \frac{N m \ cos(\frac{\gamma}{2})}{2} \tag{14}$$
 
-$$OD = \frac{N m \ cos(\gamma/2)}{2}$$
-
-where,
-$$inv \ \psi = tan \psi -\psi (radians) \tag{15}$$
+Where,
+$$inv \ \psi = tan \psi -\psi \ (radians) \tag{15}$$
 
 $$CD = (\beta + \gamma) OD \tag{16}$$
 
