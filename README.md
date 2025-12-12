@@ -7,7 +7,7 @@
 <b>Discipline | <b> Mechanical Engineering 
 :--|:--|
 <b> Lab | <b> ** Metrology and Measurement Laboratory**
-<b> Experiment|     <b> **Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer and Experiment 5**
+<b> Experiment|     <b> **Measurement of Gear Tooth Profile using Gear Tooth Vernier and Gear Tooth Micrometer and Experiment 5**
 
 
 ### About the Experiment
