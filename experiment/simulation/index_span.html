@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer</title>
+    <title>Measurement of Gear Tooth Profile using Gear Tooth Vernier and Gear Tooth Micrometer</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +65,7 @@
         <div class="row"><!--2nd row under 1st container start-->
             
             <div class="col-md-12"><!--2nd col under 2nd row start-->
-                <p class="h1"> <b>Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer </b> </p>
+                <p class="h1"> <b>Simulation</b> </p>
             </div><!--2nd col under 2nd row end-->
            
         </div><!--2nd row under 1st container end-->
@@ -93,25 +93,25 @@
 					  
 					  <li> Click on the Spur Gear to place it exactly between the screws of flange micrometer.</li><br/>
 					 
-					 <li>Click on the anticlockwise arrow sign of 'Rotate Micrometer' button. The circular scale will rotate, wait untill it stops rotating.
-					 Again rotate it to move the movable screw of micrometer towards right side. Rotate untill a span of three theeth with two red marks comes
-					 between the screws of micrometer (untill an alert message comes ('Fixed properly')). The movable screw is now properly fixed for a span of three gear teeth.
+					 <li>Click on the anticlockwise arrow sign of 'Rotate Micrometer' button. The circular scale will rotate, wait until it stops rotating.
+					 Again rotate it to move the movable screw of micrometer towards right side. Rotate until a span of three theeth with two red marks comes
+					 between the screws of micrometer (until an alert message comes ('Fixed properly')). The movable screw is now properly fixed for a span of three gear teeth.
 					 No need to adjust it for rest of the experiment. Click on 'Measure' button to measure this span thickness as Span<sub>1</sub>.</li><br/>
 					
-					 <li>Click on the clockwise arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it untill 
+					 <li>Click on the clockwise arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it until 
 					 another span of three theeth with two red marks comes between the screws of micrometer. Click on 'Measure' button to measure this span thickness as Span<sub>2</sub>.
 					 Click on 'Calculate' button to calculate the mean span.</li><br/>
 					
 					<li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.</li><br/> 
 					 
-					<li>Follow step 4 for other two successive teeth spans (three teeth) with red marks.</li><br/>
+					<li>Follow step 3 for other two successive teeth spans (three teeth) with red marks.</li><br/>
 					
 					<li> After taking another two readings of Span<sub>1</sub> and Span<sub>2</sub> click on 'Calculate' button to calculate the mean span.
-					Follow step 5 again to fill the second row of the observation table.</li><br/> 
+					Follow step 4 again to fill the second row of the observation table.</li><br/> 
 					 
 					<li>Till now total 4 readings have been taken.</li><br/>
 					 
-					<li>Now follow steps 4-7 to measure the span of three gear teeth (with one red and one blue marks). 4 teeth spans are there with
+					<li>Now follow steps 3-6 to measure the span of three gear teeth (with one red and one blue marks). 4 teeth spans are there with
 					one blue and one red mark, hence at the end there would be total 8 span readings.</li><br/>
 					
 					<li>Calculate the average Mean Span from the observation table and calculate the variation between theoritical and average mean span value.
@@ -174,40 +174,7 @@
 	</div>
 	</div></div>
 	
-	<div class="row ">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
-			<div class="card" style=" width:100%;background-color:pink" > 
-			
-			<div class="card-body"  >
-			<span class="card-title bg-light"> Measurement of Gear Span</span><br/>			
-			<span class="card-text" >Span<sub>1</sub>:&nbsp;<input  type="number" id="s1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
-			<span class="card-text">span<sub>2</sub>:&nbsp;<input type="number" id="s2" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
-			<span class="card-text">Mean span:&nbsp;<input type="number" id="ms" value="0" readonly=readonly style="width:30%;text-align:center" ></span><br/><br/>
-			<button  type="button"   class="btn btn-danger " onclick="calculate2()" >Calculate</button>
-			</div></div></div>
-			
-			<!-- <div class="col-md-6">
-			<div class="card" style="width:100%;background-color:pink"> 
-			
-			<div class="card-body"  >
-			<span class="card-title bg-light"> Calculations</span><br/>	
-			
-			<span class="card-text">Enter maximum mean t:&nbsp;<input type="number" id="maxt" value="0" style="width:30%;text-align:center"></span><br/><br/>
-			
-			<span class="card-text">Enter minimum mean t:&nbsp;<input type="number" id="mint" value="0" style="width:30%;text-align:center"></span><br/><br/>
-			
-			<span class="card-text">Maximum variation of chordal tooth thickness:&nbsp;<input type="number" id="varit" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
-			
-			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness: T = N&times;m sin (&pi;/2N) = 6.28 mm</span><br/><br/>
-			
-			<span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/>
-			
-			<button  type="button"   class="btn btn-danger " onclick="calculate()" >Calculate</button>
-			</div></div></div> -->
-			<div class="col-md-1"></div>
-			
-			</div>
+	
 			
 			
 			<div class="row ">
@@ -240,13 +207,50 @@
 	<!--<button class="btn btn-success" onclick="Dw_Tester()">Simulate</button>-->
 	</div>
 	
-	 <div class="row"><!--- 2nd row under fourth container start--->		
-		
-			<div class="col-md-12 "><!--2nd col under 2nd row start -->
-			<div   class="img-container">
+	<div class="row ">
+	<div   class="img-container">
 			<img  src="./images/gear.png" style="visibility:hidden;">
 			
 		</div><br/>
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+			<div class="card" style=" width:100%;background-color:pink" > 
+			
+			<div class="card-body"  >
+			<span class="card-title bg-light"> Measurement of Gear Span</span><br/>			
+			<span class="card-text" >Span<sub>1</sub>:&nbsp;<input  type="number" id="s1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text">span<sub>2</sub>:&nbsp;<input type="number" id="s2" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
+			<span class="card-text">Mean span:&nbsp;<input type="number" id="ms" value="0" readonly=readonly style="width:30%;text-align:center" ></span><br/><br/>
+			<button  type="button"   class="btn btn-danger " onclick="calculate2()" >Calculate</button>
+			<button  type="button" id="rem2"  class="btn btn-danger " onclick="recalc2()" disabled=disabled>Remeasure</button>
+			</div></div></div>
+			
+			<!-- <div class="col-md-6">
+			<div class="card" style="width:100%;background-color:pink"> 
+			
+			<div class="card-body"  >
+			<span class="card-title bg-light"> Calculations</span><br/>	
+			
+			<span class="card-text">Enter maximum mean t:&nbsp;<input type="number" id="maxt" value="0" style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text">Enter minimum mean t:&nbsp;<input type="number" id="mint" value="0" style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text">Maximum variation of chordal tooth thickness:&nbsp;<input type="number" id="varit" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness: T = N&times;m sin (&pi;/2N) = 6.28 mm</span><br/><br/>
+			
+			<span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/>
+			
+			<button  type="button"   class="btn btn-danger " onclick="calculate()" >Calculate</button>
+			</div></div></div> -->
+			<div class="col-md-1"></div>
+			
+			</div>
+	
+	 <div class="row "><!--- 2nd row under fourth container start--->		
+		
+			<div class="col-md-12 "><!--2nd col under 2nd row start -->
+		<br/>	
 		<button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
 		<!-- <button type="button"   class="btn btn-success " onclick="plot()" >Plot</button> -->
 		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>

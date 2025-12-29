@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en"><!--html tag start-->
 <head>
-    <title>Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer</title>
+    <title>Measurement of Gear Tooth Profile using Gear Tooth Vernier and Gear Tooth Micrometer</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +65,7 @@
         <div class="row"><!--2nd row under 1st container start-->
             
             <div class="col-md-12"><!--2nd col under 2nd row start-->
-                <p class="h1"> <b>Measurement of Gear Tooth Profile using Gear Tooth Vernier /Gear Tooth Micrometer </b> </p>
+                <p class="h1"> <b>Simulation</b> </p>
             </div><!--2nd col under 2nd row end-->
            
         </div><!--2nd row under 1st container end-->
@@ -93,9 +93,9 @@
 					 
 					 <li>Click on the 4 mm Slip Gauge again to remove it.</li><br/>
 					 
-					 <li>Click on the Spur Gear to place its one tooth (with red mark) exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
+					 <li>Click on the Spur Gear to place its one tooth (with black mark) exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
 					 
-					 <li>Click on the 'Left arrow' sign of 'Horizontal scale jaw' to fix the red marked tooth properly according to its width.</li><br/>
+					 <li>Click on the 'Left arrow' sign of 'Horizontal scale jaw' to fix the black marked tooth properly according to its width.</li><br/>
 					 
 					 <li>When it is properly fixed between the jaws one alert message will be seen. It is now properly fixed for a gear tooth so no need to
 					 adjust the horizontal jaw position for rest of the experiment. Click on 'Measure' button to measure the tooth thickness as t<sub>1</sub>.</li><br/>
@@ -103,16 +103,17 @@
 					 <li>Click on the clockwise arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it untill a tooth with black mark
 					 comes between the horizontal jaws of Vernier caliper. Click on 'Measure' button to measure this tooth thickness as t<sub>2</sub>.</li><br/>
 					
-					<li>Again click on the clockwise arrow sign of 'Rotate Gear' button untill another tooth with black mark
+					<li>Again click on the clockwise arrow sign of 'Rotate Gear' button until another tooth with black mark
 					 comes between the horizontaljaws of Vernier caliper. Click on 'Measure' button to measure this tooth thickness as t<sub>3</sub>.</li><br/>
 					
-					<li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.</li><br/> 
+					<li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.
+					Click on 'Remeasure' button.</li><br/> 
 					 
 					<li>Follow step 8 for successive three times again and click on 'Measure' button each time to measure the tooth thickness. After taking another
 					three readings of t<sub>1</sub>, t<sub>2</sub> and t<sub>3</sub> follow step 9 to fill the second row of the observation table.
 					Till now total 6 readings have been taken.</li><br/>
 					 
-					<li>Follow step 10 untill total readings of tooth thickness in observation table is 15.</li><br/>
+					<li>Follow step 10 until total readings of tooth thickness in observation table is 15.</li><br/>
 
 					 <li>Now follow steps 7-11 to measure the thickness of gear teeth (with blue marks). 15 blue marked teeth are there, hence at the end
 					 there would be total 30 thickness readings.</li><br/>
@@ -176,8 +177,40 @@
 	</div></div>
 	
 	
-		<div class="row ">	
+		
+			
+			<div class="row ">
+			<div class="col-md-12">
+			
+			<div   class="img-container">		
+			
+			<img class="img-fluid" src="./images/vernier.png" style="visibility:hidden">
+			<img  id ="vernier" src="./images/vernier.png" >
+			
+			<img id="mjh" src="./images/mjh.png" onclick="">
+			
+			<img id="mjv" src="./images/mjv.png" >
+			<img id="mjvprt" src="./images/mjvprt.png" >
+			<img id="mmgauge" src="./images/mmgauge.png" onclick="moveGauge()" >
+			<img id="mmgaugeT" src="./images/table.png" >
+			<p id = "gauget">4 mm Slip Gauge</p>
+			<img id="gear" src="./images/gear2.png" onclick = "moveGear()">
+			<p id = "geart">Spur Gear</p>					
+			
+			</div>	
+			<input type="number" id="movechk" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
+			<input type="number" id="movechk2" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
+	</div>
+
+	</div>
+	
+	<div class="row ">	
+	<div   class="img-container">
+			<img  src="./images/gear.png" style="visibility:hidden;">
+	
+		</div><br/>
 	<div class="col-md-6">
+	
 			<div class="card" style=" width:100%;background-color:pink" > 
 			
 			<div class="card-body"  >
@@ -185,7 +218,7 @@
 			<span class="card-text" >t<sub>1</sub>:&nbsp;<input  type="number" id="t1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
 			<span class="card-text">t<sub>2</sub>:&nbsp;<input type="number" id="t2" value="0" readonly=readonly  style="width:30%;text-align:center"></span><br/><br/>
 			<span class="card-text">t<sub>3</sub>:&nbsp;<input type="number" id="t3" value="0" readonly=readonly style="width:30%;text-align:center" ></span><br/><br/>
-			
+			<button  type="button" id="rem"  class="btn btn-danger " onclick="recalc()" disabled=disabled>Remeasure</button>
 			</div></div></div>
 			
 			<div class="col-md-6">
@@ -210,32 +243,6 @@
 			
 			</div>
 			
-			
-			<div class="row ">
-			<div class="col-md-12">
-			
-			<div   class="img-container">		
-			
-			<img class="img-fluid" src="./images/vernier.png" style="visibility:hidden">
-			<img  id ="vernier" src="./images/vernier.png" >
-			
-			<img id="mjh" src="./images/mjh.png" onclick="">
-			
-			<img id="mjv" src="./images/mjv.png" >
-			<img id="mjvprt" src="./images/mjvprt.png" >
-			<img id="mmgauge" src="./images/mmgauge.png" onclick="moveGauge()" >
-			<p id = "gauget">4 mm Slip Gauge</p>
-			<img id="gear" src="./images/gear2.png" onclick = "moveGear()">
-			<p id = "geart">Spur Gear</p>					
-			
-			</div>	
-			<input type="number" id="movechk" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
-			<input type="number" id="movechk2" min="1" value="1" max="2" readonly=readonly style="visibility:hidden">
-	</div>
-
-	</div>
-	
-	
 	
 	 <div class="row  my-5 gy-2"><!--- 2nd row under fourth container start--->		
 		
@@ -243,10 +250,7 @@
 			
 			
 			
-			<div   class="img-container">
-			<img  src="./images/gear.png" style="visibility:hidden;">
-	
-		</div><br/>
+			
 		<button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
 	
 		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>
@@ -264,12 +268,12 @@
 				
 				  <tr>
 					<th>Sl No.</th>
-					<th>t<sub>1</sub>(in)</th> 
-					<th>t<sub>2</sub>(in)</th>
-					<th>t<sub>3</sub>(in)</th>
-					<th>Mean t(in)</th>
-					<th>Theoritical thickness T(in)</th>
-					<th>Variation(in)</th>
+					<th>t<sub>1</sub> (mm)</th> 
+					<th>t<sub>2</sub> (mm)</th>
+					<th>t<sub>3</sub> (mm)</th>
+					<th>Mean t (mm)</th>
+					<th>Theoritical thickness T (mm)</th>
+					<th>Variation (mm)</th>
 				  </tr>
 				  
 			</table>
@@ -277,9 +281,9 @@
 				
 				  <tr>
 					<th>Sl No.</th>
-					<th>Span<sub>1</sub>(mm)</th> 
-					<th>Span<sub>2</sub>(mm)</th>
-					<th>Mean value of span(mm)</th>
+					<th>Span<sub>1</sub> (mm)</th> 
+					<th>Span<sub>2</sub> (mm)</th>
+					<th>Mean value of span (mm)</th>
 				  </tr>
 				  
 			</table>
