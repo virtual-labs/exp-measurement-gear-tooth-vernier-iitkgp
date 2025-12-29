@@ -45,11 +45,11 @@ function moveGauge(){
 		
 	if(movebox == 1){	
 document.getElementById('mmgauge').style.left = 11 + "%";
-document.getElementById('mmgauge').style.top = 80.5 + "%";
+document.getElementById('mmgauge').style.top = 79.5 + "%";
 document.getElementById('movechk').value = 2;
 }
 if(movebox == 2){	
-document.getElementById('mmgauge').style.left = 78 + "%";
+document.getElementById('mmgauge').style.left = 110 + "%";
 document.getElementById('mmgauge').style.top = 99.5 + "%";
 document.getElementById('movechk').value = 1;
 }
@@ -168,11 +168,11 @@ var pos = 15;
 	
 	 if(document.getElementById('chkgear').value == 1 || document.getElementById('movechk').value == 1  ){
 		counter = keepcount;
-		counter-= 0.5;
+		counter+= 0.5;
 		
 	}
 	}
-	else{
+	else if(newPos>60){
 		alert('The Horizontal scale jaw can not be moved in right direction further.');
 	}
 	
@@ -190,25 +190,27 @@ var pos = 15;
 	
 	if(newPos == 16.5 && document.getElementById('movechk').value == 2 ){
 		alert('Fixed properly');
-		counter = undefined;
+		//counter = undefined;
+		document.getElementById('mjh').style.left = 16.5 + "%";
 		
 	}
-	else if(document.getElementById('movechk').value == 1 ){
+	/* else if(document.getElementById('movechk').value == 1 ){
 		counter = keepcount;
 		counter-= 0.5;
 		
-	}
+	} */
 	
 	if(newPos == 14 && document.getElementById('movechk2').value == 2 ){
 		alert('Fixed properly');
-		counter = undefined;
+		//counter = undefined;
+		document.getElementById('mjh').style.left = 14 + "%";
 		
 	}
-	else if(document.getElementById('movechk2').value == 1 ){
+	/* else if(document.getElementById('movechk2').value == 1 ){
 		counter = keepcount;
 		counter-= 0.5;
 		
-	}
+	} */
 	}
 	else{
 		alert('The Horizontal scale jaw can not be moved in left direction further.');
@@ -217,7 +219,7 @@ var pos = 15;
  }
  
  ///move vertical scale jaw
-var pos2 = 10.2;
+var pos2 = 9.7;
 var pos3 = 43.2;
  var counter2 = 0,keepcount2=0;
  function verjawdown(){
@@ -226,32 +228,44 @@ var pos3 = 43.2;
 	keepcount2+=0.5;
 	
 	var newPos = math.add(pos2,counter2);
-	var newPos2 = math.add(pos3,counter2);
+	var newPos2 = math.add(pos3,counter2);	
 	
-	document.getElementById('mjv').style.top = newPos + "%";
-	document.getElementById('mjvprt').style.top = newPos2 + "%";
-	
-	if(newPos2 >= 43.2 && (document.getElementById('movechk').value == 2 || document.getElementById('movechk2').value == 2)){
+	if(newPos2 >= 42.7 && (document.getElementById('movechk').value == 2 || document.getElementById('movechk2').value == 2)){
 		alert('Fixed properly');
-		counter2 = undefined;
+		//counter2 = undefined;
+		document.getElementById('mjv').style.top = 9.7 + "%";
+	document.getElementById('mjvprt').style.top = 42.7 + "%";
 	}
-	else if(document.getElementById('movechk').value == 1 || document.getElementById('movechk2').value == 1){
+	else if((document.getElementById('movechk').value == 1 || document.getElementById('movechk2').value == 1)&&(newPos<14.7 && newPos2<48.2)){
+		document.getElementById('mjv').style.top = newPos + "%";
+	document.getElementById('mjvprt').style.top = newPos2 + "%";
+		//counter2 = keepcount2;
+		//counter2+= 0.5;
+	}
+	else if((document.getElementById('movechk').value == 1 || document.getElementById('movechk2').value == 1)&&(newPos>=14.7 || newPos2>=48.2)){
 		
-		counter2 = keepcount2;
-		counter2+= 0.5;
+		alert('Extreme Point');
 	}
 	 
  }
  
  function verjawup(){
 	 
-	counter2-=0.5; 
+	counter2-=0.5;
+	keepcount2-=0.5;	
+	
 	var newPos = math.add(pos2,counter2);
 	var newPos2 = math.add(pos3,counter2);
 	
+	 if(newPos>-2.3 || newPos2>31.2){
 	document.getElementById('mjv').style.top = newPos + "%";
 	document.getElementById('mjvprt').style.top = newPos2 + "%";
+	 }
 	
+	 if(newPos<=-2.3 || newPos2<=31.2){
+		
+		alert('Extreme Point');
+	}
  }
 
 //////animation Flange micrometer clockwise//////
@@ -498,6 +512,7 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 	}
 	if(countbox == 2){
 		document.getElementById('t3').value = thickness;
+		document.getElementById('rem').disabled=false;
 	}
 	countbox++;
 	
@@ -653,6 +668,19 @@ function Experiment2() {
        window.location.assign("index_span.html");
 	   
 }
+
+function recalc(){
+document.getElementById('t1').value = 0;
+document.getElementById('t2').value = 0;
+document.getElementById('t3').value = 0;	
+document.getElementById('rem').disabled=true;
+}
+function recalc2(){
+document.getElementById('s1').value = 0;
+document.getElementById('s2').value = 0;
+document.getElementById('ms').value = 0;	
+document.getElementById('rem2').disabled=true;
+}
 /// clear button function
 
 function Refresh(){///donot keep the name of the function as clear
@@ -696,7 +724,7 @@ var tableno = document.getElementById('seudobox').value;
 function calculate(){
 	var max = $('#maxt').val();
 	var min = $('#mint').val();
-	var sub = math.subtract(max,min);
+	var sub = math.subtract(max,min).toFixed(3);
 	$('#varit').val(sub);
 	$('#tmt').css('display','block');
 	//$('#pmt').css('display','block');	
@@ -707,5 +735,5 @@ function calculate2(){
 	var sp2 = $('#s2').val();
 	var mean = math.divide(math.add(sp1,sp2),2).toFixed(2);
 	$('#ms').val(mean);
-		
+	document.getElementById('rem2').disabled=false;	
 }
