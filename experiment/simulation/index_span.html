@@ -169,7 +169,7 @@
 		 <i class="fa fa-plus"  onclick="verjawup()" style="color:white"></i>&nbsp;Vertical scale jaw&nbsp;<i class="fa fa-minus"  onclick="verjawdown()" style="color:white"></i>
 		</button> -->
 		
-		<button type="button"  class="btn btn-info " onclick="Math_model()" >Measure</button>
+		<button type="button" id="mes2" class="btn btn-info " onclick="Math_model()" disabled=disabled>Measure</button>
 		</div>
 	</div>
 	</div></div>
@@ -251,7 +251,7 @@
 		
 			<div class="col-md-12 "><!--2nd col under 2nd row start -->
 		<br/>	
-		<button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
+		<button type="button" id="tab2"  class="btn btn-info " onclick="CreateTable()" disabled=disabled >Add to Table</button>
 		<!-- <button type="button"   class="btn btn-success " onclick="plot()" >Plot</button> -->
 		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>
 		</div>
@@ -268,12 +268,12 @@
 				
 				  <tr>
 					<th>Sl No.</th>
-					<th>t<sub>1</sub>(in)</th> 
-					<th>t<sub>2</sub>(in)</th>
-					<th>t<sub>3</sub>(in)</th>
-					<th>Mean t(in)</th>
-					<th>Theoritical thickness T(in)</th>
-					<th>Variation(in)</th>
+					<th>t<sub>1</sub> (in)</th> 
+					<th>t<sub>2</sub> (in)</th>
+					<th>t<sub>3</sub> (in)</th>
+					<th>Mean t (in)</th>
+					<th>Theoritical thickness T (in)</th>
+					<th>Error (in)</th>
 				  </tr>
 				  
 			</table>
@@ -281,9 +281,9 @@
 				
 				  <tr>
 					<th>Sl No.</th>
-					<th>Span<sub>1</sub>(mm)</th> 
-					<th>Span<sub>2</sub>(mm)</th>
-					<th>Mean value of span(mm)</th>
+					<th>Span<sub>1</sub> (mm)</th> 
+					<th>Span<sub>2</sub> (mm)</th>
+					<th>Mean value of span (mm)</th>
 				  </tr>
 				  
 			</table>

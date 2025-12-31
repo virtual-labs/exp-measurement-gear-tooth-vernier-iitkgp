@@ -153,6 +153,7 @@ else if(document.getElementById('seudobox').value == 2){
  }
     
 ///move horizontal scale jaw
+
 var pos = 15;
  var counter = 0,keepcount=0;
  function horijawright(){
@@ -204,6 +205,7 @@ var pos = 15;
 		alert('Fixed properly');
 		//counter = undefined;
 		document.getElementById('mjh').style.left = 14 + "%";
+		document.getElementById('mes1').disabled=false;
 		
 	}
 	/* else if(document.getElementById('movechk2').value == 1 ){
@@ -269,7 +271,7 @@ var pos3 = 43.2;
  }
 
 //////animation Flange micrometer clockwise//////
- var p = 0, t=0,q=0, interval, intervalrev,interval2, intervalrev2;
+/*  var p = 0, t=0,q=0, interval, intervalrev,interval2, intervalrev2;
 function cw(){
 	
 const images = ['./images/fm1.png','./images/fm2.png','./images/fm3.png','./images/fm1.png'];
@@ -359,7 +361,115 @@ function rotategaugerev2(){
 	 setTimeout(function(){ 
 	 document.getElementById('g1').disabled=false;
 	 },1050);
+} */
+
+///////////////////EDITED CODE TO STOP CONTINOUS ROTATION AFTER DOUBLE CLICK////////////////////
+var p = 0, q = 0;
+var interval = null, intervalrev = null, interval2 = null, intervalrev2 = null;
+var isRotating = false;
+
+function clearAllIntervals() {
+  clearInterval(interval);
+  clearInterval(intervalrev);
+  clearInterval(interval2);
+  clearInterval(intervalrev2);
+
+  interval = intervalrev = interval2 = intervalrev2 = null;
 }
+
+function disableGauge() {
+  document.getElementById('g1').disabled = true;
+}
+
+function enableGauge() {
+  document.getElementById('g1').disabled = false;
+  isRotating = false;
+}
+
+/* ---------- Rotation Functions ---------- */
+
+function cw() {
+  const images = ['./images/fm1.png','./images/fm2.png','./images/fm3.png','./images/fm1.png'];
+  document.getElementById('cscale').src = images[p++];
+  if (p === images.length) {
+    p = 0;
+    clearInterval(interval);
+  }
+}
+
+function acw() {
+  const images = ['./images/fm1.png','./images/fm3.png','./images/fm2.png','./images/fm1.png'];
+  document.getElementById('cscale').src = images[p++];
+  if (p === images.length) {
+    p = 0;
+    clearInterval(intervalrev);
+  }
+}
+
+function cw2() {
+  const images = ['./images/fm1.png','./images/fm2.png','./images/fm3.png','./images/fm1.png','./images/fm4.png'];
+  document.getElementById('cscale').src = images[q++];
+  if (q === images.length) {
+    q = 0;
+    clearInterval(interval2);
+  }
+}
+
+function acw2() {
+  const images = ['./images/fm1.png','./images/fm3.png','./images/fm2.png','./images/fm1.png','./images/fm4.png'];
+  document.getElementById('cscale').src = images[q++];
+  if (q === images.length) {
+    q = 0;
+    clearInterval(intervalrev2);
+  }
+}
+
+/* ---------- Button Handlers ---------- */
+
+function rotategauge() {
+  if (isRotating) return;   // 🚫 prevent double click
+  isRotating = true;
+
+  clearAllIntervals();
+  disableGauge();
+
+  interval = setInterval(cw, 100);
+  setTimeout(enableGauge, 1050);
+}
+
+function rotategaugerev() {
+  if (isRotating) return;
+  isRotating = true;
+
+  clearAllIntervals();
+  disableGauge();
+
+  intervalrev = setInterval(acw, 100);
+  setTimeout(enableGauge, 1050);
+}
+
+function rotategauge2() {
+  if (isRotating) return;
+  isRotating = true;
+
+  clearAllIntervals();
+  disableGauge();
+
+  interval2 = setInterval(cw2, 100);
+  setTimeout(enableGauge, 1050);
+}
+
+function rotategaugerev2() {
+  if (isRotating) return;
+  isRotating = true;
+
+  clearAllIntervals();
+  disableGauge();
+
+  intervalrev2 = setInterval(acw2, 100);
+  setTimeout(enableGauge, 1050);
+}
+///////////////////////////////////////////////////
 
 ///incr the right position of gauge with 0.7. with one complete revolution circular scale moves 1 mm forward
 var posCount = 0;
@@ -379,10 +489,12 @@ gwCount+=0.4;
 var newPos = math.add(csPos,posCount);
 var newgw = math.add(gw,gwCount);
 
+if(newPos<=21.2){
 document.getElementById('cscale').style.right = newPos + "%";
 //document. getElementById('seudobox').value = newPos;///grap the value of right position of circular scale
 
 document.getElementById('gatis').style.width = newgw + "%";
+}
 
 }
 function cscalePosChngRev(){
@@ -392,11 +504,12 @@ gwCount-= 0.4;
 
 var newPos = math.add(csPos,posCount);
 var newgw = math.add(gw,gwCount);
-
+if(newPos>=12.2){
 document.getElementById('cscale').style.right = newPos + "%";
 //document. getElementById('seudobox').value = newPos;///grap the value of right position of circular scale
 
-document.getElementById('gatis').style.width = newgw + "%";		
+document.getElementById('gatis').style.width = newgw + "%";
+}		
 	
 }
 
@@ -411,20 +524,26 @@ document.getElementById('gatis').style.width = newgw + "%";
 	
 	var newPos = math.add(screwwidth,counterscru);
 	
-	document.getElementById('fmmv').style.width = newPos + "%";
+	//document.getElementById('fmmv').style.width = newPos + "%";
 	if(newPos == 4.4 && document.getElementById('movechk2').value == 2){
 	
 	alert('fixed properly');
-	counterscru = undefined;
-	posCount = undefined;
+	document.getElementById('mes2').disabled=false;
+	//counterscru = undefined;
+	//posCount = undefined;
+	document.getElementById('fmmv').style.width = 4.4 + "%";
 	rotategauge2();
 }
 
-else if(document.getElementById('movechk2').value == 1 || document.getElementById('movechk2').value == 2  ){
+else if((document.getElementById('movechk2').value == 1 || document.getElementById('movechk2').value == 2) && (newPos>4.4 && newPos<8) ){
 		counterscru = counterscru2;
 		//counterscru+= 0.2;
+		document.getElementById('fmmv').style.width = newPos + "%";
 		posCount = posCount2;
 		rotategauge();
+	}
+	else if (document.getElementById('movechk2').value == 1 && newPos>=8){
+		alert('Can not rotate further');
 	}
 	 
  }
@@ -434,22 +553,29 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 	counterscru-=0.2; 
 	var newPos = math.add(screwwidth,counterscru);
 	
-	document.getElementById('fmmv').style.width = newPos + "%";
+	//document.getElementById('fmmv').style.width = newPos + "%";
 	
 	 if(newPos == 4.4 && document.getElementById('movechk2').value == 2){
 	
 	 alert('fixed properly');
+	 document.getElementById('mes2').disabled=false;
 	/*counterscru = undefined;
 	posCount = undefined; */
 	rotategaugerev2();
  }
 
-else if(document.getElementById('movechk2').value == 1 || document.getElementById('movechk2').value == 2){
+else if((document.getElementById('movechk2').value == 1 || document.getElementById('movechk2').value == 2) && newPos>4.4){
 	 	/* counterscru = counterscru2;
 		//counterscru+= 0.2;
 		posCount = posCount2; */
+		document.getElementById('fmmv').style.width = newPos + "%";
 		rotategaugerev();
+		
 	} 
+	
+	else if (document.getElementById('movechk2').value == 1 && newPos<=4.4){
+		alert('Can not rotate further');
+	}
 	 
  }
  
@@ -477,7 +603,7 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
  /////////////////////Thickness Count////////////////////////////////////////////
  var thickness,countbox = 0;
  function Math_model1(){
-	 
+	if(document.getElementById("movechk2").value==2){ 
 	 var OD = 128;///outer diameter in mm of gear
 	 var N = 30;///number of teeth of the spur gear
 	 var DP = math.divide(math.add(N,2),OD);///diametral pitch
@@ -512,7 +638,7 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 	}
 	if(countbox == 2){
 		document.getElementById('t3').value = thickness;
-		document.getElementById('rem').disabled=false;
+		document.getElementById('tab1').disabled=false;
 	}
 	countbox++;
 	
@@ -520,11 +646,16 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 		countbox = 0;
 	}
 	console.log('countbox =' + countbox);
+	}
+	else if(document.getElementById("movechk2").value==1){
+	alert('Properly place the gear');
+}
  }
  
  var span,countbox2 = 0;
  function Math_model2(){
-	 
+	
+if(document.getElementById("movechk2").value==2){	
 	 var psy = 20;///angle sai
 	 var N = 30;///number of teeth of the spur gear
 	 var smn = math.divide(math.multiply(N,math.tan(psy)),math.pi);///n value acc. manual
@@ -553,7 +684,7 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 		document.getElementById('s1').value = span;
 	}
 	if(countbox2 == 1){
-		document.getElementById('s2').value = span;
+		document.getElementById('s2').value = span;		
 	}
 	
 	countbox2++;
@@ -562,13 +693,18 @@ else if(document.getElementById('movechk2').value == 1 || document.getElementByI
 		countbox2 = 0;
 	}
 	console.log('countbox2 =' + countbox2);
+}
+
+else if(document.getElementById("movechk2").value==1){
+	alert('Properly place the gear');
+}
  }
  
  
  function Math_model(){
 	 
 	 if(document.getElementById('seudobox').value == 1){
-		 Math_model1();
+	 	 Math_model1();
 	 }
 	 else if(document.getElementById('seudobox').value == 2){
 		 Math_model2();
@@ -588,6 +724,9 @@ var table;
 
 //------------------------------------------------- Table Creation -----------------------------------------------//
 function CreateTable1() {///thickness
+
+	document.getElementById('tab1').disabled=true;
+	document.getElementById('rem').disabled=false;
 
 	var N = 30;///number of teeth
 	var m = 4;///module
@@ -623,6 +762,9 @@ function CreateTable1() {///thickness
 }  
 
 function CreateTable2() {///span
+
+document.getElementById('tab2').disabled=true;
+document.getElementById('rem2').disabled=false;
 
     arr[0] = tabrowindex+1;
     arr[1] = math.divide(math.round(math.multiply($('#s1').val(),100)),100);///math.divide(math.floor(math.multiply($('#t1').val(),1000)),1000);
@@ -694,11 +836,15 @@ var tableno = document.getElementById('seudobox').value;
 	document.getElementById('t2').value = 0;
 	document.getElementById('t3').value = 0;
 	
-	$('#maxt').val(0);
-	$('#mint').val(0);
-	$('#varit').val(0);
+	document.getElementById('mes1').disabled=true;
+	document.getElementById('tab1').disabled=true;
+	document.getElementById('rem').disabled=true;
+	//$('#maxt').val(0);
+	//$('#mint').val(0);
+	$('#avt').val(0);
+	$('#err1').val(0);
 	$('#tmt').css('display','none');
-	$('#pmt').css('display','none');
+	//$('#pmt').css('display','none');
 	}
 	if(tableno == '2'){
 	var Dtable= document.getElementById('obsTable2');
@@ -706,6 +852,10 @@ var tableno = document.getElementById('seudobox').value;
 	document.getElementById('s1').value = 0;
 	document.getElementById('s2').value = 0;
 	document.getElementById('ms').value = 0;
+	
+	document.getElementById('mes2').disabled=true;
+	document.getElementById('tab2').disabled=true;
+	document.getElementById('rem2').disabled=true;
 	
 	}
 	
@@ -722,12 +872,16 @@ var tableno = document.getElementById('seudobox').value;
 
 
 function calculate(){
-	var max = $('#maxt').val();
+	/* var max = $('#maxt').val();
 	var min = $('#mint').val();
 	var sub = math.subtract(max,min).toFixed(3);
 	$('#varit').val(sub);
-	$('#tmt').css('display','block');
+	$('#tmt').css('display','block'); */
 	//$('#pmt').css('display','block');	
+	$('#tmt').css('display','block');
+	var avg = $('#avt').val();
+	var Perr = math.abs(math.multiply(math.divide(math.subtract(0.247,avg),0.247),100).toFixed(2)); ///theoritical Thickness 0.247 in
+	$('#err1').val(Perr);
 }
 
 function calculate2(){
@@ -735,5 +889,6 @@ function calculate2(){
 	var sp2 = $('#s2').val();
 	var mean = math.divide(math.add(sp1,sp2),2).toFixed(2);
 	$('#ms').val(mean);
-	document.getElementById('rem2').disabled=false;	
+	//document.getElementById('rem2').disabled=false;
+document.getElementById('tab2').disabled=false;	
 }

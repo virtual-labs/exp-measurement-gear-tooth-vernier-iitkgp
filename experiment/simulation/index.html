@@ -89,25 +89,30 @@
 					  
 					  <li> Click on the 4 mm Slip Gauge to place it exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
 					 
-					 <li>Click on the 'Right arrow' sign of 'Horizontal scale jaw' to place the '4 mm Slip Gauge' properly according to its width.</li></br>
+					 <li><ul><li>Click on the 'Right arrow' sign of 'Horizontal scale jaw' to place the '4 mm Slip Gauge' properly according to its width.</li>
+					 <li>Click on the 'Left arrow' sign of 'Horizontal scale jaw' to properly fix it horizontally. When it is properly fixed between the jaws one alert message will be seen.</li>
+					 <li>Click on the 'Down arrow' sign of 'Vertical scale jaw' to properly fix it vertically.</li>
+					 </ul></li></br>
 					 
 					 <li>Click on the 4 mm Slip Gauge again to remove it.</li><br/>
 					 
-					 <li>Click on the Spur Gear to place its one tooth (with black mark) exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
+					 <li>Click on the Spur Gear to place its one tooth (with a red mark) exactly between the horizontal jaws of gear tooth vernier caliper.</li><br/>
 					 
-					 <li>Click on the 'Left arrow' sign of 'Horizontal scale jaw' to fix the black marked tooth properly according to its width.</li><br/>
+					 <li>Click on the 'Left arrow' sign of 'Horizontal scale jaw' again to fix the red marked tooth properly according to its width.</li><br/>
 					 
 					 <li>When it is properly fixed between the jaws one alert message will be seen. It is now properly fixed for a gear tooth so no need to
 					 adjust the horizontal jaw position for rest of the experiment. Click on 'Measure' button to measure the tooth thickness as t<sub>1</sub>.</li><br/>
 					
-					 <li>Click on the clockwise arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it untill a tooth with black mark
+					 <li>Click on the clockwise arrow sign of 'Rotate Gear' button. The gear will rotate in clockwise direction. Rotate it until a tooth with black mark
 					 comes between the horizontal jaws of Vernier caliper. Click on 'Measure' button to measure this tooth thickness as t<sub>2</sub>.</li><br/>
 					
 					<li>Again click on the clockwise arrow sign of 'Rotate Gear' button until another tooth with black mark
 					 comes between the horizontaljaws of Vernier caliper. Click on 'Measure' button to measure this tooth thickness as t<sub>3</sub>.</li><br/>
 					
-					<li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.
-					Click on 'Remeasure' button.</li><br/> 
+					<li><ul><li>Click on 'Table' at the bottom of the page to see the observation table and click on 'Add to Table' button to fill the first row of the observation table.</li>
+					<li>Click on 'Remeasure' button to take another three readings of t<sub>1</sub>, t<sub>2</sub> and t<sub>3</sub>.</li>
+					<li><b>Note:</b> Once the readings of t<sub>1</sub>, t<sub>2</sub>, and t<sub>3</sub> have been recorded, the 'Add to Table' button should be clicked.</li>
+					</ul></li><br/> 
 					 
 					<li>Follow step 8 for successive three times again and click on 'Measure' button each time to measure the tooth thickness. After taking another
 					three readings of t<sub>1</sub>, t<sub>2</sub> and t<sub>3</sub> follow step 9 to fill the second row of the observation table.
@@ -118,8 +123,8 @@
 					 <li>Now follow steps 7-11 to measure the thickness of gear teeth (with blue marks). 15 blue marked teeth are there, hence at the end
 					 there would be total 30 thickness readings.</li><br/>
 					 
-					 <li>Under 'Calculations' box enter the maximum and minimum mean tooth thickness values from observation table. Click on 'Calculate' button to see the variation
-					 between them.</li><br/>
+					 <li>Under 'Calculations' box enter the average value of mean tooth thickness, after calculating it from observation table. Click on 'Calculate' button to see the 
+					 Percentage error.</li><br/>
 					 
 					 <li> Click on 'Clear' button to erase the observation data. Click on 'Table' button to hide the observation table. </li><br/>
 					 
@@ -171,7 +176,7 @@
 		 <i class="fa fa-arrow-up"  onclick="verjawup()" style="color:white"></i>&nbsp;Vertical scale jaw&nbsp;<i class="fa fa-arrow-down"  onclick="verjawdown()" style="color:white"></i>
 		</button>
 		
-		<button type="button"  class="btn btn-info " onclick="Math_model()" >Measure</button>
+		<button type="button"  id="mes1" class="btn btn-info " onclick="Math_model()" disabled=disabled>Measure</button>
 		</div>
 	</div>
 	</div></div>
@@ -221,7 +226,7 @@
 			<button  type="button" id="rem"  class="btn btn-danger " onclick="recalc()" disabled=disabled>Remeasure</button>
 			</div></div></div>
 			
-			<div class="col-md-6">
+			<!-- <div class="col-md-6">
 			<div class="card" style="width:100%;background-color:pink"> 
 			
 			<div class="card-body"  >
@@ -233,9 +238,26 @@
 			
 			<span class="card-text">Maximum variation of chordal tooth thickness:&nbsp;<input type="number" id="varit" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
 			
-			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness: T = N&times;m sin (&pi;/2N) = 6.28 mm</span><br/><br/>
+			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness: T = N&times;m sin (&pi;/2N) = 6.28 mm (0.247 in)</span><br/><br/>
 			
-			<!-- <span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/> -->
+			<!-- <span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/> --
+			
+			<button  type="button"   class="btn btn-danger " onclick="calculate()" >Calculate</button>
+			</div></div></div> -->
+			
+			<div class="col-md-6">
+			<div class="card" style="width:100%;background-color:pink"> 
+			
+			<div class="card-body"  >
+			<span class="card-title bg-light"> Calculations</span><br/>	
+			
+			<span class="card-text" id="tmt" style="display:none">Theoritical tooth thickness (T): = 6.28 mm (0.247 in)</span><br/><br/>
+			
+			<span class="card-text">Enter average mean t (in):&nbsp;<input type="number" id="avt" value="0" style="width:30%;text-align:center"></span><br/><br/>
+			
+			<span class="card-text">&percnt; Error:&nbsp;<input type="number" id="err1" value="0" readonly=readonly style="width:30%;text-align:center"></span><br/><br/>
+			
+			<!-- T = N&times;m sin (&pi;/2N)<span class="card-text" id="pmt" style="display:none">Variation between observed and theoritical values: -6.2 &times; 10<sup>-3</sup></span><br/><br/> -->
 			
 			<button  type="button"   class="btn btn-danger " onclick="calculate()" >Calculate</button>
 			</div></div></div>
@@ -251,7 +273,7 @@
 			
 			
 			
-		<button type="button"  class="btn btn-info " onclick="CreateTable()" >Add to Table</button>
+		<button type="button"  id="tab1" class="btn btn-info " onclick="CreateTable()" disabled=disabled>Add to Table</button>
 	
 		<button type="button"   class="btn btn-danger " onclick="Refresh()" >Clear</button>
 		</div>
@@ -268,12 +290,12 @@
 				
 				  <tr>
 					<th>Sl No.</th>
-					<th>t<sub>1</sub> (mm)</th> 
-					<th>t<sub>2</sub> (mm)</th>
-					<th>t<sub>3</sub> (mm)</th>
-					<th>Mean t (mm)</th>
-					<th>Theoritical thickness T (mm)</th>
-					<th>Variation (mm)</th>
+					<th>t<sub>1</sub> (in)</th> 
+					<th>t<sub>2</sub> (in)</th>
+					<th>t<sub>3</sub> (in)</th>
+					<th>Mean t (in)</th>
+					<th>Theoritical thickness T (in)</th>
+					<th>Error (in)</th>
 				  </tr>
 				  
 			</table>
