@@ -83,7 +83,7 @@ $$Chordal \ thickness, \ t = AB = 2AD \tag{7}$$
 
 $$\angle AOD = \alpha / 2 = 2 \Pi / 4 N = \Pi / N \tag{8}$$ 
 
-$$R = \ Pitch \ Circle \ Radius = \frac{N_m}{2} \tag{9}$$
+$$R = \ Pitch \ Circle \ Radius = \frac{N \times m}{2} \tag{9}$$
 
 $$t = 2 AO \ sin \ (\alpha / 2) = 2 R \ sin \ (\Pi / \ 2 N) \tag{10}$$
 
