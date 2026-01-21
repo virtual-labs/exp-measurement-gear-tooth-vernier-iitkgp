@@ -32,7 +32,7 @@ Gears are mainly used for the transmission of power and motion. Basically, gears
 
 **Gear geometric nomenclature:**
 
-The tooth thickness is often measured at the pitch circle, as shown in Fig.3. The most commonly used curve for gear-tooth profiles is the involute of a circle. It can be described as the curve traced by a point on an inextensible string (line <span style="font-family:'Bodoni MT';font-style:italic">BC</span> in Fig.3) as it unwinds from a circle. The circle from which the involute is formed is called the base circle. The involute profile is shown in the Fig. 3. The pressure angle is defined as the angle between the line of action and the common tangent to the pitch circles shown in Fig. 4. The base and pitch radius are denoted by <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>b</sub></span> and <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>p</sub></span> respectively. The pitch circle radius is denoted by <span style="font-family:'Bodoni MT';font-style:italic">R</span>. The involute function (&delta;) is required for the gears to ensure a constant velocity ratio and smooth, efficient power transmission. It is derived from the fundamental principle of involute.
+The tooth thickness is often measured at the pitch circle, as shown in Fig.3. The most commonly used curve for gear-tooth profiles is the involute of a circle. It can be described as the curve traced by a point on an inextensible string (line <span style="font-family:'Bodoni MT';font-style:italic">BC</span> in Fig.3) as it unwinds from a circle. The circle from which the involute is formed is called the base circle. The involute profile is shown in the Fig. 3. The pressure angle is defined as the angle between the line of action and the common tangent to the pitch circles shown in Fig. 4. The base and pitch radius are denoted by <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>b</sub></span> and <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">r<sub>p</sub></span> respectively. The pitch circle radius is denoted by <span style="font-family:'Bodoni MT';font-style:italic">R</span>. The involute function (<span style="font-family:'Bodoni MT';font-style:italic">&delta;</span>) is required for the gears to ensure a constant velocity ratio and smooth, efficient power transmission. It is derived from the fundamental principle of involute.
 						
 <div align="center">
 <img src="images/involute.png" style="width:40%">
@@ -87,9 +87,9 @@ $$R = \ Pitch \ Circle \ Radius = \frac{N_m}{2} \tag{9}$$
 
 $$t = 2 AO \ sin \ (\alpha / 2) = 2 R \ sin \ (\Pi / \ 2 N) \tag{10}$$
 
-$$t = N_m \ sin \ (\Pi / \ 2 N) \tag{11}$$
+$$t = N \times m \ sin \ (\Pi / \ 2 N) \tag{11}$$
 
-$$h_2 = DE = R \ (1 - cos \ (\alpha / 2)) = \frac{N_m}{2} (1 - cos \ \Pi / 2 N) \tag{12}$$
+$$h_2 = DE = R \ (1 - cos \ (\alpha / 2)) = \frac{N \times m}{2} (1 - cos \ \Pi / 2 N) \tag{12}$$
 
 “<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">t</span>” is the chord ADB while tooth thickness is arc <span style="font-family:'Bodoni MT';font-style:italic">AEB</span>. Therefore, the tooth thickness thus measured is called as chordal tooth thickness.
 
@@ -113,13 +113,13 @@ then,
 
 $$\beta = \frac{(n-1)2\pi}{N} \tag{13}$$
 
-$$\beta = \frac{N_m \ cos(\frac{\gamma}{2})}{2} \tag{14}$$
+$$\beta = \frac{N \times m \ cos(\frac{\gamma}{2})}{2} \tag{14}$$
 
 $$CD = (\beta + \gamma) OD \tag{15}$$
 
 $$AB = CD = A'B' \tag{16}$$
 
-$$AB = \frac{(\beta + \gamma)}{2} N_m \ cos\frac{\gamma}{2} \tag{17}$$
+$$AB = \frac{(\beta + \gamma)}{2} N \times m  \ cos\frac{\gamma}{2} \tag{17}$$
 
 where,
 $$\alpha = \frac{\pi}{N} \tag{18}$$
@@ -132,13 +132,13 @@ The optimum number of teeth “<span style="font-family:'Bodoni MT';font-style:i
 
 $$AB = AF + FB = CD = 2OF(\psi + \delta) \tag{21}$$
 
-<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">n</span> = nearest integer to $$\frac{AB \times N}{\pi N_m \ cos \psi} = \frac{N(\psi + \delta)}{\pi} \tag{22}$$
+<span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">n</span> = nearest integer to $$\frac{AB \times N}{\pi N \times m \ cos \psi} = \frac{N(\psi + \delta)}{\pi} \tag{22}$$
 
 $$n = \frac{N \ tan \ \psi}{\pi} \ here \psi = 20 ^{\circ} \tag{23}$$
 
 Theoretically the value of the span can be calculated by 
 
-$$AB = \frac{(\beta + \gamma)N_m \ cos (\frac{\gamma}{2})}{2} \tag{24}$$
+$$AB = \frac{(\beta + \gamma)N \times m \ cos (\frac{\gamma}{2})}{2} \tag{24}$$
 
 
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>								
