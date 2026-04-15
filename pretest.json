@@ -1,0 +1,60 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The purpose of gears in mechanical systems is to",
+      "answers": {
+        "a": "Transfer electrical power",
+        "b": "Transfer motion between rotating shafts",
+        "c": "Generate heat",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "2. What does the term pitch circle refer to in gear nomenclature ? ",
+      "answers": {
+        "a": "The ratio of pitch diameter to the number of teeth",
+        "b": "The imaginary circle where upon which the pitch diameter is located",
+        "c": "Distance from pitch circle to the tip of the tooth",
+        "d": "All of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "3. The dedendum of the gear tooth profile is defined as",
+      "answers": {
+        "a": "Thickness of gear tooth",
+        "b": "Distance from the pitch circle to the tip of the tooth",
+        "c": "Distance between the pitch circle to the root circle",
+        "d": "The height of the tooth above the pitch circle"
+      },
+      "correctAnswer": "c",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "4. Which type of gears have non-parallel and non-intersecting shafts?",
+      "answers": {
+        "a": "Spur gears",
+        "b": "Bevel gears",
+        "c": "Helical gears",
+        "d": "Worm gears"
+      },
+      "correctAnswer": "d",
+      "difficulty": "Beginner"
+    },
+    {
+      "question": "5. The module of gear is defined as",
+      "answers": {
+        "a": "Thickness of gear tooth",
+        "b": "The ratio of pitch diameter to the number of teeth ",
+        "c": "Distance between the pitch circle to the root circle",
+        "d": "None of the above"
+      },
+      "correctAnswer": "b",
+      "difficulty": "Beginner"
+    }
+  ]
+}
