@@ -1,24 +1,27 @@
 ## Introduction
 
+<div align="center">
+<img src="experiment/images/iitkgp.png" width="10%">
+</div>
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b> Mechanical Engineering 
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
+<b> Lab | <b> ** Metrology and Measurement Laboratory**
+<b> Experiment|     <b> **Measurement of Gear Tooth Profile using Gear Tooth Vernier and Gear Tooth Micrometer and Experiment 5**
 
-### About the Experiment 
 
-Fill a brief description of this experiment here
+### About the Experiment
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
-:--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+Gears are toothed wheel that are used to transmit motion from one shaft to another shaft. Gears are generally used for following different reasons:
 
-### Contributors List
+1. To increase or decrease the speed of rotation
+2. To change the amount of force or torque
+3. To move rotational motion to a different axis (i.e. parallel, right angles, rotating, linear etc.)
+4. To reverse the direction of rotation.
 
-SrNo | Name | Faculty or Student | Department| Institute | Email id
-:--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+
+<div align="center">
+<img class="img-fluid"  src="experiment/images/gear.jpg" alt=""><br>
+<b>Fig. 1. Gears</b>
+</div>
+
